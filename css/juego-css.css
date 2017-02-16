@@ -1,0 +1,30 @@
+body {
+	background-color: #1a7195;
+}
+.categorias img {
+	margin:18px 8px 0px 0px;
+}
+
+.label-roulette {
+	font-size: 22px;
+	text-align: center;
+	color: white;
+	letter-spacing: 18px;
+}
+	
+.r-categ {
+	float:left;
+	margin:0px;
+
+}
+
+.r-preg {
+	margin:0px;
+}
+
+.boton-start {
+    display: block;
+    margin: auto;
+}
+
+
