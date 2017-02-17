@@ -8,7 +8,6 @@
 			duration : 2, //(x second)
 			stopCallback : function() {
 				console.log("default stop");
-				$('#myModal').modal('show');
 			},
 			startCallback : function() {
 				console.log("default start");
@@ -201,6 +200,23 @@
 	}
 })(jQuery);
 
-$("#myModal").modal('show');
+var option = {
+	speed : 30,
+	duration : 5,
+	stopImageNumber : 0,
+	startCallback : function() {
+		console.log('start');
+	},
+	slowDownCallback : function() {
+		console.log('slowDown');
+	},
+	stopCallback : function($stopElm) {
+		console.log('stop');
+		$('#myModal').modal('show');
+	}
+}
+
+$("#roulette").roulette(option);	
+console.log('loaded!!');
 
 
