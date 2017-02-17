@@ -53,8 +53,8 @@ $(function(){
 	rouletter2.roulette(p2);	
 	
 	$('.start').click(function(){
-		p1.stopImageNumber = randomIntFromInterval(1,6)-1;
-		p2.stopImageNumber = randomIntFromInterval(1,10)-1;
+		p1.stopImageNumber = randomIntFromInterval(0,5);
+		p2.stopImageNumber = randomIntFromInterval(0,9);
 		
 		rouletter1.roulette('option', p1);
 		rouletter2.roulette('option', p2);
