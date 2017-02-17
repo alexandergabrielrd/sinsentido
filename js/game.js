@@ -12,15 +12,15 @@ $(function(){
 		stopImageNumber : 1, 
 		duration : 2, 
 		startCallback : function() {
-			appendLogMsg('start1');
+			//appendLogMsg('start1');
 			$('.start').attr('disabled', 'true');
 		},
 		slowDownCallback : function() {
-			appendLogMsg('slowdown1');
+			//appendLogMsg('slowdown1');
 			//$('.stop').attr('disabled', 'true');
 		},
 		stopCallback : function($stopElm) {
-			appendLogMsg('stop1');
+			//appendLogMsg('stop1');
 			$('.start').removeAttr('disabled');
 		}
 
@@ -30,30 +30,31 @@ $(function(){
 		stopImageNumber : 2, 
 		duration : 2, 
 		startCallback : function() {
-			appendLogMsg('start2');
+			//appendLogMsg('start2');
 			$('.start').attr('disabled', 'true');
 		},
 		slowDownCallback : function() {
-			appendLogMsg('slowdown2');
+			//appendLogMsg('slowdown2');
 		},
 		stopCallback : function($stopElm) {
-			appendLogMsg('stop2');
+			//appendLogMsg('stop2');
 			$('.start').removeAttr('disabled');
+			console.log(p1.stopImageNumber);
+			console.log(p2.stopImageNumber);
+			$('#myModal').modal('show');
 		}
 
 	}
+	
 	var rouletter1 = $('div.roulette1');
 	var rouletter2 = $('div.roulette2');
-	
 	
 	rouletter1.roulette(p1);	
 	rouletter2.roulette(p2);	
 	
 	$('.start').click(function(){
 		p1.stopImageNumber = randomIntFromInterval(1,6)-1;
-		console.log(p1.stopImageNumber);
 		p2.stopImageNumber = randomIntFromInterval(1,10)-1;
-		console.log(p2.stopImageNumber);
 		
 		rouletter1.roulette('option', p1);
 		rouletter2.roulette('option', p2);
