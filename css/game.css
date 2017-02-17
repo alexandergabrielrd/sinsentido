@@ -3,6 +3,8 @@ body {
 }
 .categorias img {
 	margin:18px 8px 0px 0px;
+	width:70px;
+	height:70px;
 }
 
 .label-roulette {

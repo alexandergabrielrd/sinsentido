@@ -1,5 +1,6 @@
 
-var QandAjson = [{
+
+var QandAjson = { "qa":[{
 	"tacto": [{
 		"q": "Pregunta tacto 1",
 		"o": ["Fiesta", "Focus", "Mustang", "Uno", "Aveo"],
@@ -254,6 +255,9 @@ var QandAjson = [{
 }];
 
 var QandA = JSON.parse(QandAjson);
+
+
+
 
 
 

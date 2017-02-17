@@ -2,17 +2,36 @@ body {
 	padding-top: 20px;
 	padding-bottom: 40px;
 }
-div.roulette {
+div.roulette1 {
 	margin-top: 45px;
 	border-radius: 10px;
 
 }
-div.roulette-inner {
+div.roulette1-inner {
 	left : 33px;
 }
 
 
-div.roulette_container {
+div.roulette1_container {
+	background-color:rgb(253, 252, 253);
+	width:200px;
+	height:200px;
+	border:1px solid rgba(253, 252, 253, 0.31);
+	box-shadow:0px 0px 3px lightpink;
+	margin:auto;
+}
+
+div.roulette2 {
+	margin-top: 45px;
+	border-radius: 10px;
+
+}
+div.roulette2-inner {
+	left : 33px;
+}
+
+
+div.roulette2_container {
 	background-color:rgb(253, 252, 253);
 	width:200px;
 	height:200px;

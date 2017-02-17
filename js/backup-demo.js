@@ -4,25 +4,22 @@ $(function(){
 		console.log($(this).height());
 	});
 	var appendLogMsg = function(msg) {
-		$('#msg')
-	.append('<p class="muted">' + msg + '</p>')
-	.scrollTop(100000000);
-
+		console.log(msg);
 	}
-	var p = {
+	var p1 = {
 		startCallback : function() {
-			appendLogMsg('start');
+			appendLogMsg('start1');
 			$('#speed, #duration').slider('disable');
 			$('#stopImageNumber').spinner('disable');
 			$('.start').attr('disabled', 'true');
 			$('.stop').removeAttr('disabled');
 		},
 		slowDownCallback : function() {
-			appendLogMsg('slowdown');
+			appendLogMsg('slowdown1');
 			$('.stop').attr('disabled', 'true');
 		},
 		stopCallback : function($stopElm) {
-			appendLogMsg('stop');
+			appendLogMsg('stop1');
 			$('#speed, #duration').slider('enable');
 			$('#stopImageNumber').spinner('enable');
 			$('.start').removeAttr('disabled');
@@ -30,8 +27,32 @@ $(function(){
 		}
 
 	}
-	var rouletter = $('div.roulette');
-	rouletter.roulette(p);	
+	var p2 = {
+		startCallback : function() {
+			appendLogMsg('start2');
+			$('#speed, #duration').slider('disable');
+			$('#stopImageNumber').spinner('disable');
+			$('.start').attr('disabled', 'true');
+			$('.stop').removeAttr('disabled');
+		},
+		slowDownCallback : function() {
+			appendLogMsg('slowdown2');
+			$('.stop').attr('disabled', 'true');
+		},
+		stopCallback : function($stopElm) {
+			appendLogMsg('stop2');
+			$('#speed, #duration').slider('enable');
+			$('#stopImageNumber').spinner('enable');
+			$('.start').removeAttr('disabled');
+			$('.stop').attr('disabled', 'true');
+		}
+
+	}
+	var rouletter1 = $('div.roulette1');
+	var rouletter2 = $('div.roulette2');
+	rouletter1.roulette(p1);	
+	rouletter1.roulette(p2);	
+	
 	$('.stop').click(function(){
 		var stopImageNumber = $('.stopImageNumber').val();
 		if(stopImageNumber == "") {
@@ -111,4 +132,3 @@ $(function(){
 		updateStopImageNumber(stopImageNumber);
 	});
 });
-
