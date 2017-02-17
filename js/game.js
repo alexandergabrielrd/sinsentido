@@ -8,7 +8,7 @@ $(function(){
 	}
 
 	var p1 = {
-		speed : 30, 
+		speed : 80, 
 		stopImageNumber : 1, 
 		duration : 2, 
 		startCallback : function() {
@@ -23,12 +23,12 @@ $(function(){
 			//appendLogMsg('stop1');
 			$('.start').removeAttr('disabled');
 		}
-
 	}
+	
 	var p2 = {
-		speed : 30, 
+		speed : 20, 
 		stopImageNumber : 2, 
-		duration : 2, 
+		duration : 1, 
 		startCallback : function() {
 			//appendLogMsg('start2');
 			$('.start').attr('disabled', 'true');
