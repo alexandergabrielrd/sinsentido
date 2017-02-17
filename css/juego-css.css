@@ -15,11 +15,20 @@ body {
 .r-categ {
 	float:left;
 	margin:0px;
+}
 
+.r-categ img {
+	width:70px;
+	height:70px;
 }
 
 .r-preg {
 	margin:0px;
+}
+
+.r-preg img{
+	width:70px;
+	height:70px;
 }
 
 .boton-start {
