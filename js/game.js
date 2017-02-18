@@ -3,7 +3,7 @@ $(function(){
 	var question;
 	var	options;
 	var	answer;
-	var opacity = 0.35;
+	var opacity = 0.4;
 	
 	var appendLogMsg = function(msg) {
 		console.log(msg);
