@@ -29,13 +29,13 @@ $(function(){
 		stopImageNumber : 1, 
 		duration : 2, 
 		startCallback : function() {
-			$('.start').attr('disabled', 'true');
+			//$('.start').attr('disabled', 'true');
 		},
 		slowDownCallback : function() {
 			//$('.stop').attr('disabled', 'true');
 		},
 		stopCallback : function($stopElm) {
-			$('.start').removeAttr('disabled');
+			//$('.start').removeAttr('disabled');
 		}
 	}
 	
@@ -89,9 +89,8 @@ $(function(){
 	});
 	
 	var condition=true;
-
-	$('#abtn').click(function(){
-
+	
+	var checkAnswer = function() {
 		// Verificar que la respuesta es correcta
 		if (condition) {
 			$("#"+p1.stopImageNumber).css('opacity' , 1);
@@ -112,11 +111,24 @@ $(function(){
 			estatus[p1.stopImageNumber] = false;
 			condition=true;
 	
-	console.log(JSON.stringify(estatus));
+			console.log(JSON.stringify(estatus));
 		}
 		// Cambiar la imagen del sentido en la parte superior
 		// A buena si la respuesta es buena a mala sino
 		console.log("qa modal closed");
+	}
+	
+	
+	$('#qaModal').on('hide', function () {
+		checkAnswer();
+	})
+	
+	$('#qaModal').on('hidden.bs.modal', function (e) {
+		checkAnswer();
+	})
+
+	$('#abtn').click(function(){
+		checkAnswer();
 	});
 	
 	$('#gobtn').click(function(){
