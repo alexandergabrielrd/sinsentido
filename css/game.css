@@ -12,7 +12,7 @@ body {
 
 .label-roulette {
 	margin-top: 24px;
-	font-size: 27px;
+	font-size: 25px;
 	text-align: center;
 	color: white;
 	letter-spacing: 21px;
@@ -48,11 +48,31 @@ div.roulette2 {
 
 .btn_container {
 	text-align:center;
+	outline: none;
 }
 
 .btn_container .start {
+	background-color: #1a7195;
+	color: white;
+	font-size: 17px;
 	margin-top:10px;
-	padding: 163px 20px;
+	border: 5px solid #ffffff;
+	padding: 160px 18px;
+	border-radius: 35px;
+	transition-duration: 0.4s;
+	outline: none;
 }
+
+.btn_container .start:hover{
+	background-color: #ffffff;
+	color: #1a7195;
+	font-size: 17px;
+	margin-top:10px;
+	border: 5px solid #1a7195;
+	padding: 160px 18px;
+	border-radius: 35px;
+	outline: none;
+}
+
 
 
