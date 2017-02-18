@@ -25,6 +25,7 @@ div.roulette1 {
 
 .r-categ {
 	margin:0px;
+	border-radius: 10px;
 }
 
 div.roulette2 {
@@ -39,6 +40,7 @@ div.roulette2 {
 
 .r-preg {
 	margin:0px;
+	border-radius: 10px;
 }
 
 .r-preg img{
