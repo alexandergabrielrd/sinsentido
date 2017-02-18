@@ -4,12 +4,6 @@
 	padding-bottom: 40px;
 }
 
-#qaModal {
-	background-color: #1a7195;
-	padding-top: 20px;
-	padding-bottom: 40px;
-}
-
 .categorias {
 	top: 10px;
 	width:525px;
@@ -83,6 +77,7 @@ div.roulette2 {
 	outline: none;
 	height: 370px;
 	width: 65px;
+	margin: 0px 14px 0px 14px;
 }
 
 .btn_container .start {

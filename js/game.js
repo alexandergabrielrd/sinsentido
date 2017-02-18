@@ -3,7 +3,7 @@
 	var question;
 	var	options;
 	var	answer;
-	var opacity = 0.35;
+	var opacity = 0.75;
 	
 	var appendLogMsg = function(msg) {
 		console.log(msg);
@@ -27,7 +27,7 @@
 	var p1 = {
 		speed : 90, 
 		stopImageNumber : 1, 
-		duration : 2, 
+		duration : 3, 
 		startCallback : function() {
 			//$('.start').attr('disabled', 'true');
 		},
@@ -42,7 +42,7 @@
 	var p2 = {
 		speed : 65, 
 		stopImageNumber : 2, 
-		duration : 1, 
+		duration : 2, 
 		startCallback : function() {
 			$('.start').attr('disabled', 'true');
 		},
