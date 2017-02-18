@@ -24,7 +24,7 @@ $(function(){
 	}
 
 	var p1 = {
-		speed : 80, 
+		speed : 100, 
 		stopImageNumber : 1, 
 		duration : 2, 
 		startCallback : function() {
@@ -39,7 +39,7 @@ $(function(){
 	}
 	
 	var p2 = {
-		speed : 20, 
+		speed : 70, 
 		stopImageNumber : 2, 
 		duration : 1, 
 		startCallback : function() {
@@ -77,7 +77,12 @@ $(function(){
 		
 		rouletter1.roulette('option', p1);
 		rouletter2.roulette('option', p2);
-
+        var audio = {};
+        audio["walk"] = new Audio();
+        audio["walk"].src = "http://alexandergabrielrd.github.io/sinsentido/audio/slot.mp3"
+        audio["walk"].addEventListener('load', function () {
+            audio["walk"].play();
+        });
 		rouletter1.roulette('start');	
 		rouletter2.roulette('start');	
 	});
@@ -105,7 +110,8 @@ $(function(){
 			$("#"+p1.stopImageNumber).css('opacity' , 0.2);
 			estatus[p1.stopImageNumber] = false;
 			condition=true;
-			console.log(JSON.stringify(estatus));
+	
+	console.log(JSON.stringify(estatus));
 		}
 		// Cambiar la imagen del sentido en la parte superior
 		// A buena si la respuesta es buena a mala sino
