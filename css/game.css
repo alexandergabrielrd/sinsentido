@@ -20,6 +20,13 @@
 	height:70px;
 }
 
+.instrucciones {
+	margin-top: 10px;}
+	
+.instrucciones img {
+	height: 40px;
+	width:40px;
+}
 .label-roulette1 {
 	margin-top: 24px;
 	font-size: 25px;
@@ -91,7 +98,7 @@ div.roulette2 {
 	margin-top:76px;
 	border: 8px solid #ffffff;
 	border-radius: 35px;
-	transition-duration: 0.1s;
+	transition-duration: 0.15s;
 	outline: none;
 }
 
@@ -101,7 +108,7 @@ div.roulette2 {
 	width: 70px;
 	background-color: #ffbd4a;
 	color: #1a7195;
-	font-size: 42px;
+	font-size: 45px;
 	letter-spacing: 37px;
 	margin-top:76px;
 	border: 5px solid #1a7195;

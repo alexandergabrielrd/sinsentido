@@ -1,45 +1,45 @@
-QandAObj = { "qa":[{
+﻿QandAObj = { "qa":[{
  	"list": [{
- 		"q": "Pregunta corona 1",
- 		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
+ 		"q": "¿Cuál es el órgano más fuerte del cuerpo humano?",
+ 		"o": ["Glúteos", "Lengua", "Abdomen", "Ninguna de las anteriores"],
+ 		"a": "2"
+ 	}, {
+ 		"q": "¿Cuál es el sentido más sensible del cuerpo humano?",
+ 		"o": ["Olfato", "Visión", "Audición", "Gusto"],
  		"a": "1"
  	}, {
- 		"q": "Pregunta corona 2",
- 		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
+ 		"q": "¿Cuál es el órgano más grande del cuerpo humano?",
+ 		"o": ["Intestinos", "Hígado", "Pulmones", "Ninguno de las anteriores"],
+ 		"a": "4"
+ 	}, {
+ 		"q": "¿En qué se asemejan el gusto y el olfato?",
+ 		"o": ["En nada", "Tienen quimioceptores", "Tienen mecanorreceptores", "Reciben estímulos químicos"],
+ 		"a": "4"
+ 	}, {
+ 		"q": "Es un estímulo químico...",
+ 		"o": ["Luz", "Sonido", "Olores", "Ninguna de las anteriores"],
+ 		"a": "3"
+ 	}, {
+ 		"q": "¿Qué significa 'Piloereccion'?",
+ 		"o": ["Pene", "Piel de Gallina", "Escalofríos", "El término no existe"],
+ 		"a": "2"
+ 	}, {
+ 		"q": "¿Cómo se llaman los dimunitos ojos de las moscas?",
+ 		"o": ["Ocelos", "Polistes", "Alegolos", "Escorbutos"],
  		"a": "1"
  	}, {
- 		"q": "Pregunta corona 3",
- 		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
+ 		"q": "¿Cuál de estas enfermedades puede dañar por completo la visión?",
+ 		"o": ["Diabetes", "Glaucoma", "Cataratas", "Todas las anteriores"],
+ 		"a": "4"
+ 	}, {
+ 		"q": "¿Qué signica eltérmino 'Daltónico'?",
+ 		"o": ["No percibe colores", "Mal enfoque de las cosas", "Que tiene el iris deforme", "Nervio óptico inflamado"],
  		"a": "1"
  	}, {
- 		"q": "Pregunta corona 4",
- 		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
- 		"a": "1"
- 	}, {
- 		"q": "Pregunta corona 5",
- 		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
- 		"a": "1"
- 	}, {
- 		"q": "Pregunta corona 6",
- 		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
- 		"a": "1"
- 	}, {
- 		"q": "Pregunta corona 7",
- 		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
- 		"a": "1"
- 	}, {
- 		"q": "Pregunta corona 8",
- 		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
- 		"a": "1"
- 	}, {
- 		"q": "Pregunta corona 9",
- 		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
- 		"a": "1"
- 	}, {
- 		"q": "Pregunta corona 10",
- 		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
- 		"a": "1"
- 	}]
+ 		"q": "¿Cuál de estos músicos era sordo?",
+ 		"o": ["Mozart", "Beethoven", "Chopin", "Rachmaninoff"],
+ 		"a": "2"
+ 	},]
  }, {
  	"list": [{
  		"q": "Pregunta gusto 1",

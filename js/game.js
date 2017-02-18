@@ -3,7 +3,7 @@
 	var question;
 	var	options;
 	var	answer;
-	var opacity = 0.75;
+	var opacity = 0.35;
 	
 	var appendLogMsg = function(msg) {
 		console.log(msg);
@@ -25,7 +25,7 @@
 	}
 
 	var p1 = {
-		speed : 90, 
+		speed : 85, 
 		stopImageNumber : 1, 
 		duration : 3, 
 		startCallback : function() {
