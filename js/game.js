@@ -1,4 +1,9 @@
 $(function(){
+	
+	var question;
+	var	options;
+	var	answer;
+	
 	var appendLogMsg = function(msg) {
 		console.log(msg);
 	}
@@ -51,7 +56,7 @@ $(function(){
 			options = QandAObj.qa[p1.stopImageNumber].list[p2.stopImageNumber].o;
 			answer = QandAObj.qa[p1.stopImageNumber].list[p2.stopImageNumber].a;
 			// Colocar la informacion en los campos del modal
-			 $('#pregunta').text(question);
+			$('#pregunta').text(question);
 
 			// Deshabilitar el boton de cerrar el modal hasta responder
 			// Habilitar el boton del modal al responder
