@@ -24,7 +24,7 @@ $(function(){
 	}
 
 	var p1 = {
-		speed : 100, 
+		speed : 90, 
 		stopImageNumber : 1, 
 		duration : 2, 
 		startCallback : function() {
@@ -39,7 +39,7 @@ $(function(){
 	}
 	
 	var p2 = {
-		speed : 70, 
+		speed : 65, 
 		stopImageNumber : 2, 
 		duration : 1, 
 		startCallback : function() {

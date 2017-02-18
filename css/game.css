@@ -1,6 +1,9 @@
 body {
 	background-color: #1a7195;
+	padding-top: 20px;
+	padding-bottom: 40px;
 }
+
 .categorias img {
 	margin:18px 8px 0px 0px;
 	width:70px;
@@ -13,12 +16,21 @@ body {
 	color: white;
 	letter-spacing: 18px;
 }
-	
+
+div.roulette1 {
+	margin-top: 45px;
+	border-radius: 10px;
+}	
 .r-categ {
 	float:left;
 	margin:0px;
 }
 
+div.roulette2 {
+	margin-top: 45px;
+	border-radius: 10px;
+
+}
 .r-categ img {
 	width:350px;
 	height:350px;
@@ -33,9 +45,5 @@ body {
 	height:350px;
 }
 
-.boton-start {
-    display: block;
-    margin: auto;
-}
 
 
