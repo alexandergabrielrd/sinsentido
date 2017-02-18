@@ -107,7 +107,7 @@ $(function(){
 			condition=true;
 			console.log(JSON.stringify(estatus));
 		} else {
-			$("#"+p1.stopImageNumber).css('opacity' , 0.2);
+			$("#"+p1.stopImageNumber).css('opacity' , 0.35);
 			estatus[p1.stopImageNumber] = false;
 			condition=true;
 	
@@ -120,13 +120,13 @@ $(function(){
 	
 	$('#gobtn').click(function(){
 			//Inicializar todas las imágenes opacas
-		$('.categorias').children().css('opacity' , 0.2);
+		$('.categorias').children().css('opacity' , 0.35);
 		for (var i = 0; i < estatus.length; ++i) { estatus[i] = false; }
 		console.log("go modal closed");
 	});
 
 	//Inicializar todas las imágenes opacas
-	$('.categorias').children().css('opacity' , 0.2);
+	$('.categorias').children().css('opacity' , 0.35);
 	var estatus = new Array(6);
 	for (var i = 0; i < estatus.length; ++i) { estatus[i] = false; }
 
