@@ -151,6 +151,10 @@
 	$('#gobtn').click(function(){
 		restartGame();
 	});
+	
+	$('#help').click(function(){
+		$("#helpModal").modal("show");
+	});
 
 	//Inicializar todas las imágenes opacas
 	$('.categorias').children().css('filter' , "grayscale(100%)");

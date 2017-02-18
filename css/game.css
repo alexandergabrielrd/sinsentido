@@ -136,9 +136,16 @@ div.roulette2 {
 	margin-bottom: 155px;
 }
 
-.modal-dialog{
-	position: absolute;
-	left: 0%;
-	top: 10%;
+.modal-dialog {
+	margin: auto;
+	margin-top: 10%;
 } 
 
+.modal-dialog.help {
+	margin: auto;
+	margin-top: 5%;
+} 
+
+ .carousel-control.left, .carousel-control.right {
+	background-image: none;
+ }

@@ -10,10 +10,7 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
 	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	
 <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/themes/ui-lightness/jquery-ui.css">
-
-
 <link rel="stylesheet" type="text/css" href="css/game.css">
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -28,7 +25,6 @@
 
 <!--Datos de las preguntas-->
 <script src="js/db.js"></script>
-
 <!--Logica del juego-->
 <script src="js/game.js"></script>
 
@@ -53,7 +49,7 @@
 		<img id="5" src="images/categorias/ojoA.png" alt="Vista">
 	</div>
 	<div class="instrucciones">
-		<img src="images/instrucciones.png" >
+		<img id="help" src="images/instrucciones.png">
 	</div>
 	<div class="col-sm-1"></div>
 </div>
@@ -94,7 +90,7 @@
 </div>
 
 <!-- Modal -->
-<div id="qaModal" class="modal fade modal-dialog" role="dialog">
+<div id="qaModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -127,7 +123,7 @@
 </div>
 
 <!-- Modal -->
-<div id="goverModal" class="modal fade modal-dialog" role="dialog">
+<div id="goverModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <!-- Modal content-->
     <div class="modal-content">
@@ -137,8 +133,65 @@
 			</div>
 			<div class="modal-body">
 				<p id="pregunta">Felicitaciones....</p>
+			</div>
 			<div class="modal-footer">
 				<button id="gobtn" type="button" class="btn btn-default" data-dismiss="modal">Empezar de nuevo!!!</button>
+			</div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="helpModal" class="modal fade" role="dialog">
+  <div class="modal-dialog help">
+    <!-- Modal content-->
+    <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Te voy a ayudar!!!!</h4>
+			</div>
+			<div class="modal-body">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+					<li data-target="#myCarousel" data-slide-to="3"></li>
+				  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+					<div class="item active">
+					  <img src="images/categ/corona.png" alt="Chania">
+					</div>
+
+					<div class="item">
+					  <img src="images/categ/corona.png" alt="Chania">
+					</div>
+
+					<div class="item">
+					  <img src="images/categ/corona.png" alt="Flower">
+					</div>
+
+					<div class="item">
+					  <img src="images/categ/corona.png" alt="Flower">
+					</div>
+				  </div>
+
+				  <!-- Left and right controls -->
+				  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Anterior</span>
+				  </a>
+				  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Siguiente</span>
+				  </a>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button id="hbtn" type="button" class="btn btn-default" data-dismiss="modal">Quiero jugar!!!</button>
 			</div>
     </div>
   </div>
