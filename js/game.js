@@ -3,6 +3,7 @@ $(function(){
 	var question;
 	var	options;
 	var	answer;
+	var opacity = 0.35;
 	
 	var appendLogMsg = function(msg) {
 		console.log(msg);
@@ -107,7 +108,7 @@ $(function(){
 			condition=true;
 			console.log(JSON.stringify(estatus));
 		} else {
-			$("#"+p1.stopImageNumber).css('opacity' , 0.35);
+			$("#"+p1.stopImageNumber).css('opacity' , opacity);
 			estatus[p1.stopImageNumber] = false;
 			condition=true;
 	
@@ -120,13 +121,13 @@ $(function(){
 	
 	$('#gobtn').click(function(){
 			//Inicializar todas las imágenes opacas
-		$('.categorias').children().css('opacity' , 0.35);
+		$('.categorias').children().css('opacity' , opacity);
 		for (var i = 0; i < estatus.length; ++i) { estatus[i] = false; }
 		console.log("go modal closed");
 	});
 
 	//Inicializar todas las imágenes opacas
-	$('.categorias').children().css('opacity' , 0.35);
+	$('.categorias').children().css('opacity' , opacity);
 	var estatus = new Array(6);
 	for (var i = 0; i < estatus.length; ++i) { estatus[i] = false; }
 

@@ -11,6 +11,7 @@ body {
 }
 
 .label-roulette {
+	margin-top: 24px;
 	font-size: 22px;
 	text-align: center;
 	color: white;
@@ -18,16 +19,16 @@ body {
 }
 
 div.roulette1 {
-	margin-top: 45px;
+	margin-top: 10px;
 	border-radius: 10px;
 }	
+
 .r-categ {
-	float:left;
 	margin:0px;
 }
 
 div.roulette2 {
-	margin-top: 45px;
+	margin-top: 10px;
 	border-radius: 10px;
 
 }
@@ -45,5 +46,13 @@ div.roulette2 {
 	height:350px;
 }
 
+.btn_container {
+	text-align:center;
+}
+
+.btn_container .start {
+	margin-top:10px;
+	padding: 163px 20px;
+}
 
 
