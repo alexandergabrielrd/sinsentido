@@ -7,20 +7,28 @@ $(function(){
 		return Math.floor(Math.random()*(max-min+1)+min);
 	}
 
+	var allTrue = function(boolarray) {
+		for (var i = 0; i < boolarray.length; ++i) { 
+			if (boolarray[i]) {
+				continue;
+			} else {
+				return(false);
+			}
+		}
+		return(true);
+	}
+
 	var p1 = {
 		speed : 80, 
 		stopImageNumber : 1, 
 		duration : 2, 
 		startCallback : function() {
-			//appendLogMsg('start1');
 			$('.start').attr('disabled', 'true');
 		},
 		slowDownCallback : function() {
-			//appendLogMsg('slowdown1');
 			//$('.stop').attr('disabled', 'true');
 		},
 		stopCallback : function($stopElm) {
-			//appendLogMsg('stop1');
 			$('.start').removeAttr('disabled');
 		}
 	}
@@ -30,14 +38,11 @@ $(function(){
 		stopImageNumber : 2, 
 		duration : 1, 
 		startCallback : function() {
-			//appendLogMsg('start2');
 			$('.start').attr('disabled', 'true');
 		},
 		slowDownCallback : function() {
-			//appendLogMsg('slowdown2');
 		},
 		stopCallback : function($stopElm) {
-			//appendLogMsg('stop2');
 			$('.start').removeAttr('disabled');
 			console.log(p1.stopImageNumber);
 			console.log(p2.stopImageNumber);
@@ -47,9 +52,10 @@ $(function(){
 			answer = QandAObj.qa[p1.stopImageNumber].list[p2.stopImageNumber].a;
 			// Colocar la informacion en los campos del modal
 			 $('#pregunta').text(question);
+
 			// Deshabilitar el boton de cerrar el modal hasta responder
 			// Habilitar el boton del modal al responder
-			$('#myModal').modal('show');
+			$('#qaModal').modal('show');
 		}
 
 	}
@@ -71,11 +77,47 @@ $(function(){
 		rouletter2.roulette('start');	
 	});
 	
+	var condition=true;
+
 	$('#abtn').click(function(){
+
 		// Verificar que la respuesta es correcta
+		if (condition) {
+			$("#"+p1.stopImageNumber).css('opacity' , 1);
+			estatus[p1.stopImageNumber] = true;
+			// Revisar si todas están ok para terminar
+			if (allTrue(estatus)) {
+				// Termina el juego
+				console.log("GAME OVER!!!")
+				$('#goverModal').modal('show');
+			} else {
+				console.log(JSON.stringify(estatus));
+				console.log("GAME not OVER!!!")
+			}
+			condition=true;
+			console.log(JSON.stringify(estatus));
+		} else {
+			$("#"+p1.stopImageNumber).css('opacity' , 0.2);
+			estatus[p1.stopImageNumber] = false;
+			condition=true;
+			console.log(JSON.stringify(estatus));
+		}
 		// Cambiar la imagen del sentido en la parte superior
 		// A buena si la respuesta es buena a mala sino
-		console.log("modal closed");
+		console.log("qa modal closed");
 	});
 	
+	$('#gobtn').click(function(){
+			//Inicializar todas las imágenes opacas
+		$('.categorias').children().css('opacity' , 0.2);
+		for (var i = 0; i < estatus.length; ++i) { estatus[i] = false; }
+		console.log("go modal closed");
+	});
+
+	//Inicializar todas las imágenes opacas
+	$('.categorias').children().css('opacity' , 0.2);
+	var estatus = new Array(6);
+	for (var i = 0; i < estatus.length; ++i) { estatus[i] = false; }
+
+
 });
