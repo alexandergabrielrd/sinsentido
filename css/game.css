@@ -64,38 +64,38 @@ div.roulette2 {
 }
 
 .btn_container .start {
-	height: 350px;
-	width: 60px;
+	height: 335px;
+	width: 70px;
 	background-color: #1a7195;
 	color: white;
-	font-size: 37px;
+	font-size: 45px;
 	letter-spacing: 27px;
-	margin-top:69px;
-	border: 5px solid #ffffff;
+	margin-top:76px;
+	border: 8px solid #ffffff;
 	border-radius: 35px;
 	transition-duration: 0.2s;
 	outline: none;
 }
 
 .btn_container .start:hover{
-	height: 350px;
-	width: 60px;
+	height: 335px;
+	width: 70px;
 	background-color: #ffffff;
 	color: #1a7195;
-	font-size: 37px;
-	letter-spacing: 36px;
-	margin-top:69px;
+	font-size: 42px;
+	letter-spacing: 40px;
+	margin-top:76px;
 	border: 5px solid #1a7195;
 	border-radius: 35px;
 	outline: none;
 }
 
 .rotate {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 
   /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
   -webkit-transform-origin: 50% 50%;
@@ -107,7 +107,7 @@ div.roulette2 {
   /* Should be unset in IE9+ I think. */
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   
-	margin-bottom: 155px;
+	margin-top: 155px;
 }
 
 
