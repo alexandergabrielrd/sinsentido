@@ -1,4 +1,4 @@
-body {
+﻿body {
 	background-color: #1a7195;
 	padding-top: 20px;
 	padding-bottom: 40px;
@@ -12,7 +12,8 @@ body {
 	border: 5px solid #ffffff;
 	border-radius: 50px;
 	padding-right: 10px;
-	}
+}
+	
 .categorias img {
 	margin:8px 8px 8px 0px;
 	width:70px;
@@ -23,7 +24,7 @@ body {
 	margin-top: 24px;
 	font-size: 25px;
 	text-align: left;
-	margin-left: 4px;
+	margin-left: 17px;
 	color: white;
 	letter-spacing: 25px;
 }
@@ -32,7 +33,7 @@ body {
 	margin-top: 24px;
 	font-size: 25px;
 	text-align: left;
-	margin-left: 0px;
+	margin-left: 13px;
 	color: white;
 	letter-spacing: 29px;
 }
@@ -40,6 +41,9 @@ body {
 div.roulette1 {
 	margin-top: 10px;
 	float: left;
+	border: 10px  solid #ffffff;
+	border-radius: 14px;
+	border-right-width: 15px;
 }	
 
 .r-categ {
@@ -54,6 +58,9 @@ div.roulette1 {
 div.roulette2 {
 	margin-top: 10px;
 	float: right;
+	border: 10px  solid #ffffff;
+	border-radius: 14px;
+	border-right-width: 15px;
 }
 
 .r-preg {
@@ -73,26 +80,28 @@ div.roulette2 {
 }
 
 .btn_container .start {
+	margin-left: 17px;
 	height: 335px;
 	width: 70px;
 	background-color: #1a7195;
 	color: white;
-	font-size: 45px;
-	letter-spacing: 27px;
+	font-size: 37px;
+	letter-spacing: 32px;
 	margin-top:76px;
 	border: 8px solid #ffffff;
 	border-radius: 35px;
-	transition-duration: 0.2s;
+	transition-duration: 0.1s;
 	outline: none;
 }
 
 .btn_container .start:hover{
+	margin-left: 17px;
 	height: 335px;
 	width: 70px;
-	background-color: #ffffff;
+	background-color: #ffbd4a;
 	color: #1a7195;
-	font-size: 37px;
-	letter-spacing: 45px;
+	font-size: 42px;
+	letter-spacing: 37px;
 	margin-top:76px;
 	border: 5px solid #1a7195;
 	border-radius: 35px;
@@ -100,11 +109,11 @@ div.roulette2 {
 }
 
 .rotate {
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
 
   /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
   -webkit-transform-origin: 50% 50%;
@@ -116,8 +125,12 @@ div.roulette2 {
   /* Should be unset in IE9+ I think. */
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   
-	margin-top: 155px;
-	margin-top: 155px;
+	margin-bottom: 155px;
 }
 
+.modal-dialog{
+	position: absolute;
+	left: 0%;
+	top: 10%;
+} 
 

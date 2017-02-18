@@ -1,9 +1,9 @@
-$(function(){
+﻿$(function(){
 	
 	var question;
 	var	options;
 	var	answer;
-	var opacity = 0.4;
+	var opacity = 0.35;
 	
 	var appendLogMsg = function(msg) {
 		console.log(msg);
@@ -94,6 +94,7 @@ $(function(){
 		// Verificar que la respuesta es correcta
 		if (condition) {
 			$("#"+p1.stopImageNumber).css('opacity' , 1);
+			$("#"+p1.stopImageNumber).css('filter' , "none");
 			estatus[p1.stopImageNumber] = true;
 			// Revisar si todas están ok para terminar
 			if (allTrue(estatus)) {
@@ -108,6 +109,8 @@ $(function(){
 			console.log(JSON.stringify(estatus));
 		} else {
 			$("#"+p1.stopImageNumber).css('opacity' , opacity);
+			$("#"+p1.stopImageNumber).css('filter' , "grayscale(100%)");
+			
 			estatus[p1.stopImageNumber] = false;
 			condition=true;
 	
@@ -133,12 +136,14 @@ $(function(){
 	
 	$('#gobtn').click(function(){
 			//Inicializar todas las imágenes opacas
+		$('.categorias').children().css('filter' , "grayscale(100%)");
 		$('.categorias').children().css('opacity' , opacity);
 		for (var i = 0; i < estatus.length; ++i) { estatus[i] = false; }
 		console.log("go modal closed");
 	});
 
 	//Inicializar todas las imágenes opacas
+	$('.categorias').children().css('filter' , "grayscale(100%)");
 	$('.categorias').children().css('opacity' , opacity);
 	var estatus = new Array(6);
 	for (var i = 0; i < estatus.length; ++i) { estatus[i] = false; }

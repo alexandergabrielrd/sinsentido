@@ -1,4 +1,4 @@
-$(function(){
+﻿$(function(){
 
 	$('.roulette').find('img').hover(function(){
 		console.log($(this).height());
