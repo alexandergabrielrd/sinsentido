@@ -10,29 +10,36 @@ body {
 	height:70px;
 }
 
-.label-roulette {
+.label-roulette1 {
 	margin-top: 24px;
 	font-size: 25px;
-	text-align: center;
+	text-align: left;
+	margin-left: 20px;
+	color: white;
+	letter-spacing: 21px;
+}
+
+.label-roulette2 {
+	margin-top: 24px;
+	font-size: 25px;
+	text-align: left;
+	margin-left: 35px;
 	color: white;
 	letter-spacing: 21px;
 }
 
 div.roulette1 {
 	margin-top: 10px;
-	border-radius: 10px;
 }	
 
 .r-categ {
 	margin:0px;
-	border-radius: 10px;
 }
 
 div.roulette2 {
 	margin-top: 10px;
-	border-radius: 10px;
-
 }
+
 .r-categ img {
 	width:350px;
 	height:350px;
@@ -40,7 +47,6 @@ div.roulette2 {
 
 .r-preg {
 	margin:0px;
-	border-radius: 10px;
 }
 
 .r-preg img{
@@ -57,7 +63,7 @@ div.roulette2 {
 	background-color: #1a7195;
 	color: white;
 	font-size: 17px;
-	margin-top:10px;
+	margin-top:65px;
 	border: 5px solid #ffffff;
 	padding: 160px 18px;
 	border-radius: 35px;
@@ -69,9 +75,9 @@ div.roulette2 {
 	background-color: #ffffff;
 	color: #1a7195;
 	font-size: 17px;
-	margin-top:10px;
+	margin-top:65px;
 	border: 5px solid #1a7195;
-	padding: 160px 18px;
+	padding: 165px 18px;
 	border-radius: 35px;
 	outline: none;
 }
