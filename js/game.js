@@ -121,6 +121,12 @@
 		console.log("qa modal closed");
 	}
 	
+	var restartGame = function() {
+		//Inicializar todas las imágenes opacas
+		$('.categorias').children().css('filter' , "grayscale(100%)");
+		$('.categorias').children().css('opacity' , opacity);
+		for (var i = 0; i < estatus.length; ++i) { estatus[i] = false; }
+	}
 	
 	$('#qaModal').on('hide', function () {
 		checkAnswer();
@@ -134,12 +140,16 @@
 		checkAnswer();
 	});
 	
+	$('#goverModal').on('hide', function () {
+		restartGame();
+	})
+	
+	$('#goverModal').on('hidden.bs.modal', function (e) {
+		restartGame();
+	})
+	
 	$('#gobtn').click(function(){
-			//Inicializar todas las imágenes opacas
-		$('.categorias').children().css('filter' , "grayscale(100%)");
-		$('.categorias').children().css('opacity' , opacity);
-		for (var i = 0; i < estatus.length; ++i) { estatus[i] = false; }
-		console.log("go modal closed");
+		restartGame();
 	});
 
 	//Inicializar todas las imágenes opacas

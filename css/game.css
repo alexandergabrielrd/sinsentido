@@ -4,6 +4,12 @@
 	padding-bottom: 40px;
 }
 
+#qaModal {
+	background-color: #1a7195;
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
 .categorias {
 	top: 10px;
 	width:525px;
