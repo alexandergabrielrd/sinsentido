@@ -259,7 +259,6 @@
 	var estatus = new Array(6);
 	for (var i = 0; i < estatus.length; ++i) { estatus[i] = false; }
 	audio["normal"].play();
-	
-
+	var normalflow = false;
 
 });
