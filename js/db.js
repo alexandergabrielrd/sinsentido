@@ -5,11 +5,11 @@
  		"a": "2"
  	}, {
  		"q": "¿Cuál es el sentido más sensible del cuerpo humano?",
- 		"o": ["Olfato", "Visión", "Audición", "Gusto"],
+ 		"o": ["Olfato", "Vista", "Oido", "Gusto"],
  		"a": "1"
  	}, {
  		"q": "¿Cuál es el órgano más grande del cuerpo humano?",
- 		"o": ["Intestinos", "Hígado", "Pulmones", "Ninguno de las anteriores"],
+ 		"o": ["Intestinos", "Hígado", "Pulmones", "Ninguna de las anteriores"],
  		"a": "4"
  	}, {
  		"q": "¿En qué se asemejan el gusto y el olfato?",
@@ -17,14 +17,14 @@
  		"a": "4"
  	}, {
  		"q": "Es un estímulo químico...",
- 		"o": ["Luz", "Sonido", "Olores", "Ninguna de las anteriores"],
+ 		"o": ["La luz", "El sonido", "El olor", "Ninguna de las anteriores"],
  		"a": "3"
  	}, {
  		"q": "¿Qué significa 'Piloerección'?",
  		"o": ["Pene", "Piel de Gallina", "Escalofríos", "El término no existe"],
  		"a": "2"
  	}, {
- 		"q": "¿Cómo se llaman los dimunitos ojos de las moscas?",
+ 		"q": "¿Cómo se llaman los diminutos ojos de las moscas?",
  		"o": ["Ocelos", "Polistes", "Alegolos", "Escorbutos"],
  		"a": "1"
  	}, {
@@ -62,7 +62,7 @@
  		"o": ["El roce con el paladar", "Las papilas gustativas", "Todas las anteriores", "Ninguna de las anteriores"],
  		"a": "2"
  	}, {
- 		"q": "¿Cuál tipo de papila gustativa se encargan de percibir el sabor salado?",
+ 		"q": "¿Cuál tipo de papila gustativa se encarga de percibir el sabor salado?",
  		"o": ["Filiforme", "Fungiforme", "Caliciforme", "Ninguna de las anteriores"],
  		"a": "2"
  	}, {
@@ -100,20 +100,20 @@
  		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
  		"a": "1"
  	}, {
- 		"q": "¿Cuáles son las partes del laberinto ósea?",
- 		"o": ["Oido interno y medio", "Martillo, yunque y estribo", "Vestíbulo, cóclea y conductos semicirculares", "Ninguno de los anteriores"],
+ 		"q": "¿Cuáles son las partes del laberinto óseo?",
+ 		"o": ["Oido interno y medio", "Martillo, yunque y estribo", "Vestíbulo, cóclea y conductos semicirculares", "Ninguna de los anteriores"],
  		"a": "1"
  	}, {
- 		"q": "¿Qué célula reacciona a la gravedad y movimiento?",
+ 		"q": "¿Qué célula reacciona a la gravedad y el movimiento?",
  		"o": ["Celulas timpánica", "Célula ciliar", "Célula oval", "Ninguna de las anteriores"],
  		"a": "2"
  	}, {
- 		"q": "¿Cómo se llama el líquido donde se encuntran los mecanorreceptores?",
+ 		"q": "¿Cómo se llama el líquido donde se encuentran los mecanorreceptores?",
  		"o": ["Líquido sáculo", "Líquido linfa", "Líquido timpánico", "Ninguna de las anteriores"],
  		"a": "2"
  	}, {
- 		"q": "¿Cuándo unafrecuencia se vuelve ultrasonido? ",
- 		"o": ["Mayor a 20000 Hz", "Mayor a 40000 Hz", "Mayor de 15000 Hz", "Ninguna de las anteriores"],
+ 		"q": "¿Cuándo una frecuencia se vuelve ultrasonido? ",
+ 		"o": ["Cuando es mayor a 20000 Hz", "Cuando es mayor a 40000 Hz", "Cuando es mayor de 15000 Hz", "Ninguna de las anteriores"],
  		"a": "2"
  	}, {
  		"q": "Pregunta oido 9",
@@ -121,7 +121,7 @@
  		"a": "1"
  	}, {
  		"q": "¿Cuál de estas afirmaciones es correcta?",
- 		"o": ["El timpano se divide en oido interno y externo", "El oido informa acerca de la posición del cuerpo en el espacio", "La oreja esta formada por hueso blando", "Ninguna es correcta"],
+ 		"o": ["El tímpano se divide en oído interno y externo", "El oído informa acerca de la posición del cuerpo en el espacio", "La oreja está formada por hueso blando", "Ninguna es correcta"],
  		"a": "2" 
  	}]
  }, {
@@ -134,13 +134,13 @@
  		"o": ["Cretoides", "Zetoides", "Etmoides", "Zeptoides"],
  		"a": "3"
  	}, {
- 		"q": "¿Cuáles son las células asociadas de las olfatorias?",
+ 		"q": "¿Cuáles son las células que se asocian a las olfatorias?",
  		"o": ["Glandulares y ciliares", "Ciliares y sustentaculares", "Glandulares y sustentaculares", "Todas las anteriores"],
- 		"a": "1"
+ 		"a": "3"
  	},{
  		"q": "¿En qué parte de la cavidad nasal se calienta el aire?",
  		"o": ["Fosa nasal", "Bulbo olfatorio", "Pituitaria roja", "Ninguna de las anteriores"],
- 		"a": "1"
+ 		"a": "3"
  	}, {
  		"q": "¿Dónde se ubica el bulbo olfatorio?",
  		"o": ["Lóbulo occipital", "Lóbulo frontal", "Lóbulo temporal", "Ninguna de las anteriores"],
@@ -155,29 +155,29 @@
  		"a": "3"
  	}, {
  		"q": "¿Qué funciones tienen las células mitrales?",
- 		"o": ["Transmiten info. a la corteza cerebral", "Receptores accesorias", "Todas las anteriores", "Ninguna de las anteriores"],
+ 		"o": ["Transmiten información a la corteza cerebral", "Receptores accesorios", "Todas las anteriores", "Ninguna de las anteriores"],
  		"a": "1"
  	}, {
  		"q": "¿Qué pasa cuando se olfatea el mismo olor durante un tiempo determinado?",
- 		"o": ["Se mantiene igual", "Se realza", "Se disminuye", "El olor cambia"],
+ 		"o": ["Se mantiene igual", "Se realza", "Disminuye", "El olor cambia"],
  		"a": "3"
  	},  {
  		"q": "¿Cuál de estas afirmaciones es correcta?",
- 		"o": ["La célula olfatoria es una neurona bipolar", "Los cilios entran en contacto con el moco ", "Todas las anteriores", "Ninguna de las anteriores"],
+ 		"o": ["La célula olfatoria es una neurona bipolar", "Los cilios entran en contacto con el moco", "Todas las anteriores", "Ninguna de las anteriores"],
  		"a": "3"
  	}]
  }, {
  	"list": [{ //listassss tacto
- 		"q": "Capa más profunda de la piel ...",
- 		"o": ["Cornea", "Epidermis", "Dermis", "Tejido Subcutaneo"],
+ 		"q": "¿Cuál es la capa más profunda de la piel?",
+ 		"o": ["Córnea", "Epidermis", "Dermis", "Tejido subcutáneo"],
  		"a": "3"
  	}, {
- 		"q": "Corpúsculo de la piel que detecta el frio",
+ 		"q": "¿Cuál es el corpúsculo de la piel que detecta el frío?",
  		"o": ["Pacini", "Krause", "Ruffini", "Meissner"],
  		"a": "2"
  	}, {
  		"q": "¿Cuál de las opciones es una estructura accesoria de la piel?",
- 		"o": ["Glándulas hipofisiarias", "Glándula sebacea", "Todas las anteriores", "Ninguna de las anteriores"],
+ 		"o": ["Glándulas hipofisiarias", "Glándula sebácea", "Todas las anteriores", "Ninguna de las anteriores"],
  		"a": "2"
  	}, { 
  		"q": "La uña esta compuesta por...",
@@ -185,7 +185,7 @@
  		"a": "1"
  	}, {
  		"q": "¿Cuál de estas no es una célula especializada?",
- 		"o": ["Corpusculos de krause", "Terminaciones libres", "Corpusculos de Meissner", "Ninguna de las anteriores"],
+ 		"o": ["Corpúsculos de krause", "Terminaciones libres", "Corpúsculos de Meissner", "Ninguna de las anteriores"],
  		"a": "2"
  	}, {
  		"q": "¿Qué función tiene la melanina en la piel?",
@@ -194,7 +194,7 @@
  	}, {
  		"q": "Cavidad interna que ocupa la raíz de un pelo...",
  		"o": ["Glándula sebacea", "Poros de la piel", "Folículo piloso", "Ninguna de las anteriores"],
- 		"a": "1"
+ 		"a": "3"
  	}, {
  		"q": "Las sensaciones de texturas son percibidas por...",
  		"o": ["Termorreceptores", "Mecanorreceptores", "Termoceptores", "Quimioceptores"],
@@ -206,7 +206,7 @@
  	}, {
  		"q": "¿Qué capa de la piel se encuentra cerca de los vasos sanguíneos?",
  		"o": ["Epidermis", "Bidermis", "Dermis", "Ninguna de las anteriores"],
- 		"a": "1"
+ 		"a": "3"
  	}]
  }, {
  	"list": [{ //listasss vision
@@ -219,7 +219,7 @@
  		"a": "4"
  	}, {
  		"q": "Recibo estímulos luminosos y me encuentro en la retina ¿Quién soy?",
- 		"o": ["Interoceptor", "Fotoceptor", "Nervio Optico", "Ninguna de las anteriores"],
+ 		"o": ["Interoceptor", "Fotoceptor", "Nervio óptico", "Ninguna de las anteriores"],
  		"a": "4"
  	}, {
  		"q": "¿Cuántos tipos de receptores existen en el ojo?",
@@ -230,23 +230,23 @@
  		"o": ["Pupila", "Cristalino", "Párpados", "Iris"],
  		"a": "4"
  	}, {
- 		"q": "¿Que defecto ocasiona que la imagen se forma delante de la retina?",
+ 		"q": "¿Qué defecto ocasiona que la imagen se forma delante de la retina?",
  		"o": ["Miopía", "Astigmatismo", "Presbicia", "Ninguna de las anteriores"],
  		"a": "1"
  	}, {
  		"q": "¿Cuál de estas afirmaciones es correcta?",
- 		"o": ["El ojo capta imágenes", "El iris es un tabique", "La retina es la capa mas externa del ojo", "Ninguna es correcta"],
+ 		"o": ["El ojo capta imágenes", "El iris es un tabique", "La retina es la capa más externa del ojo", "Ninguna es correcta"],
  		"a": "2"
  	}, {
  		"q": "¿Quién se encarga de lograr la visión binocular?",
- 		"o": ["Cristalino", "Músculos Intrínsecos", "El iris", "Ninguna de las anteriores"],
+ 		"o": ["Cristalino", "Músculos intrínsecos", "El iris", "Ninguna de las anteriores"],
  		"a": "4"
  	}, {
- 		"q": "Liquido con consistencia gelatinosa que mantiene al ojo con una forma redonda...",
- 		"o": ["Humor acuoso", "Cristalino", "Liquido óptico-neuronal", "Humor Vitreo"],
+ 		"q": "Líquido con consistencia gelatinosa que mantiene al ojo con una forma redonda...",
+ 		"o": ["Humor acuoso", "Cristalino", "Liquido óptico-neuronal", "Humor vítreo"],
  		"a": "4"
  	}, {
- 		"q": "la única parte del interior del ojo que no tiene retina",
+ 		"q": "La única parte del interior del ojo que no tiene retina",
  		"o": ["Coroides", "Todo su interior tiene retina", "Punto ciego", "Ninguna de las anteriores"],
  		"a": "3"
  	}]

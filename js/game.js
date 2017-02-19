@@ -81,10 +81,6 @@
 		slowDownCallback : function() {
 		},
 		stopCallback : function($stopElm) {
-			$('.start').removeAttr('disabled');
-			console.log(p1.stopImageNumber);
-			console.log(p2.stopImageNumber);
-			console.log(QandAObj.qa[p1.stopImageNumber].list[p2.stopImageNumber].q);
 			question = QandAObj.qa[p1.stopImageNumber].list[p2.stopImageNumber].q;
 			options = QandAObj.qa[p1.stopImageNumber].list[p2.stopImageNumber].o;
 			answer = QandAObj.qa[p1.stopImageNumber].list[p2.stopImageNumber].a;
@@ -94,10 +90,10 @@
 			$('#o2').text(options[1]);
 			$('#o3').text(options[2]);
 			$('#o4').text(options[3]);
+			
 			audioTransition("spin","qa");
 			audio["normal"].pause();
-			// Deshabilitar el boton de cerrar el modal hasta responder
-			// Habilitar el boton del modal al responder
+			
 			$('#qaModal').modal('show');
 		}
 
@@ -140,6 +136,7 @@
 	audio["correct"].addEventListener("ended", function() {
 		audio["normal"].volume=0.3;
 		audio["normal"].play();
+		$('.start').removeAttr('disabled');
 	});
 	audio["error"] = new Audio();
     audio["error"].src = "audio/wrong-a.mp3";
@@ -150,6 +147,7 @@
 	audio["error"].addEventListener("ended", function() {
 		audio["normal"].volume=0.3;
 		audio["normal"].play();
+		$('.start').removeAttr('disabled');
 	});
 	audio["gover"] = new Audio();
     audio["gover"].src = "audio/gover.mp3";
@@ -184,8 +182,7 @@
 		audio["qa"].pause();
 		// Verificar que la respuesta es correctati
 		condition=$('input[name=optradio]:checked').val()==answer;
-		console.log("seleccionado "+$('input[name=optradio]:checked').val());
-		console.log("answer "+answer);
+		// Deschequear las opciones de la ventana de pregunta y respuesta
 		$('input[name=optradio]:checked').prop('checked', false);
 		if (condition) {
 			audio["correct"].currentTime=0
