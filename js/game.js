@@ -94,7 +94,6 @@
 			$('#o3').text(options[2]);
 			$('#o4').text(options[3]);
 			audioTransition("spin","qa");
-			
 			// Deshabilitar el boton de cerrar el modal hasta responder
 			// Habilitar el boton del modal al responder
 			$('#qaModal').modal('show');
@@ -183,7 +182,10 @@
 	
 	var checkAnswer = function() {
 		audio["qa"].pause();
-		// Verificar que la respuesta es correcta
+		// Verificar que la respuesta es correctati
+		condition=$('input[name=optradio]:checked').val()==answer;
+		console.log("seleccionado "+$('input[name=optradio]:checked').val());
+		console.log("answer "+answer);
 		if (condition) {
 			audio["correct"].currentTime=0
 			audio["correct"].play();
