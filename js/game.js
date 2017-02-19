@@ -58,7 +58,11 @@
 			answer = QandAObj.qa[p1.stopImageNumber].list[p2.stopImageNumber].a;
 			// Colocar la informacion en los campos del modal
 			$('#pregunta').text(question);
-
+					
+			audio["spin"].pause();
+			audio["qa"].currentTime=0
+			audio["qa"].play();
+			
 			// Deshabilitar el boton de cerrar el modal hasta responder
 			// Habilitar el boton del modal al responder
 			$('#qaModal').modal('show');
@@ -70,7 +74,64 @@
 	var rouletter2 = $('div.roulette2');
 	
 	rouletter1.roulette(p1);	
-	rouletter2.roulette(p2);	
+	rouletter2.roulette(p2);
+	
+	var audio = {};
+	audio["normal"] = new Audio();
+    audio["normal"].src = "audio/normal.mp3";
+	audio["normal"].volume = 0.5;
+    audio["normal"].addEventListener('load', function () {
+        audio["normal"].play();
+    });
+	audio["normal"].addEventListener("ended", function() {
+		audio["normal"].currentTime=0
+		audio["normal"].play();
+	});
+    audio["spin"] = new Audio();
+    audio["spin"].src = "audio/slot.mp3";
+	audio["spin"].volume = 0.5;
+    audio["spin"].addEventListener('load', function () {
+        audio["spin"].play();
+    });
+    audio["qa"] = new Audio();
+    audio["qa"].src = "audio/jeopardy.mp3";
+	audio["qa"].volume = 0.4;
+    audio["qa"].addEventListener('load', function () {
+        audio["qa"].play();
+    });		
+	audio["correct"] = new Audio();
+    audio["correct"].src = "audio/correct.mp3";
+	audio["correct"].volume = 0.6;
+    audio["correct"].addEventListener('load', function () {
+        audio["correct"].play();
+    });	
+	audio["correct"].addEventListener("ended", function() {
+		audio["normal"].play();
+	});
+	audio["error"] = new Audio();
+    audio["error"].src = "audio/error.mp3";
+	audio["error"].volume = 0.6;
+    audio["error"].addEventListener('load', function () {
+        audio["error"].play();
+    });	
+	audio["error"].addEventListener("ended", function() {
+		audio["normal"].play();
+	});
+	audio["gover"] = new Audio();
+    audio["gover"].src = "audio/gover.mp3";
+	audio["gover"].volume = 0.8;
+    audio["gover"].addEventListener('load', function () {
+        audio["gover"].play();
+    });	
+	audio["help"] = new Audio();
+    audio["help"].src = "audio/jeopardy.mp3";
+	audio["help"].volume = 0.8;
+    audio["help"].addEventListener('load', function () {
+        audio["help"].play();
+    });
+	audio["help"].addEventListener('ended', function () {
+        audio["help"].play();
+    });
 	
 	$('.start').click(function(){
 		p1.stopImageNumber = randomIntFromInterval(0,QandAObj.qa.length-1);
@@ -78,12 +139,12 @@
 		
 		rouletter1.roulette('option', p1);
 		rouletter2.roulette('option', p2);
-        var audio = {};
-        audio["walk"] = new Audio();
-        audio["walk"].src = "http://alexandergabrielrd.github.io/sinsentido/audio/slot.mp3"
-        audio["walk"].addEventListener('load', function () {
-            audio["walk"].play();
-        });
+		
+		audio["normal"].volume=0.2;
+		audio["normal"].pause();
+		audio["spin"].currentTime=0
+		audio["spin"].play();
+		
 		rouletter1.roulette('start');	
 		rouletter2.roulette('start');	
 	});
@@ -91,23 +152,31 @@
 	var condition=true;
 	
 	var checkAnswer = function() {
+		audio["qa"].pause();
 		// Verificar que la respuesta es correcta
 		if (condition) {
+			audio["correct"].currentTime=0
+			audio["correct"].play();
 			$("#"+p1.stopImageNumber).css('opacity' , 1);
 			$("#"+p1.stopImageNumber).css('filter' , "none");
 			estatus[p1.stopImageNumber] = true;
 			// Revisar si todas están ok para terminar
 			if (allTrue(estatus)) {
 				// Termina el juego
-				console.log("GAME OVER!!!")
+				console.log("GAME OVER!!!");
+				audio["gover"].currentTime=0
+				audio["gover"].play();
 				$('#goverModal').modal('show');
 			} else {
+				audio["normal"].play();
 				console.log(JSON.stringify(estatus));
-				console.log("GAME not OVER!!!")
+				console.log("GAME not OVER!!!");
 			}
-			condition=true;
+			condition=false;
 			console.log(JSON.stringify(estatus));
 		} else {
+			audio["error"].currentTime=0
+			audio["error"].play();
 			$("#"+p1.stopImageNumber).css('opacity' , opacity);
 			$("#"+p1.stopImageNumber).css('filter' , "grayscale(100%)");
 			
@@ -129,31 +198,59 @@
 	}
 	
 	$('#qaModal').on('hide', function () {
-		checkAnswer();
+		if (!normalflow){
+			checkAnswer();
+		} else {
+			normalflow = false;
+		}
 	})
 	
 	$('#qaModal').on('hidden.bs.modal', function (e) {
-		checkAnswer();
+		if (!normalflow){
+			checkAnswer();
+		} else {
+			normalflow = false;
+		}
 	})
 
 	$('#abtn').click(function(){
+		normalflow = true;
 		checkAnswer();
 	});
 	
 	$('#goverModal').on('hide', function () {
+		audio["gover"].pause();
 		restartGame();
 	})
 	
 	$('#goverModal').on('hidden.bs.modal', function (e) {
+		audio["gover"].pause();
 		restartGame();
 	})
 	
 	$('#gobtn').click(function(){
+		audio["gover"].pause();
 		restartGame();
 	});
 	
 	$('#help').click(function(){
+		audio["normal"].pause();
+		audio["help"].currentTime=0
+		audio["help"].play();
 		$("#helpModal").modal("show");
+	});
+	$('#helpModal').on('hide', function () {
+		audio["help"].pause();
+		audio["normal"].play();
+	})
+	
+	$('#helpModal').on('hidden.bs.modal', function (e) {
+		audio["help"].pause();
+		audio["normal"].play();
+	})
+	$('#hbtn').click(function(){
+		audio["help"].pause();
+		audio["normal"].play();
 	});
 
 	//Inicializar todas las imágenes opacas
@@ -161,6 +258,8 @@
 	$('.categorias').children().css('opacity' , opacity);
 	var estatus = new Array(6);
 	for (var i = 0; i < estatus.length; ++i) { estatus[i] = false; }
+	audio["normal"].play();
+	
 
 
 });
