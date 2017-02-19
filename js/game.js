@@ -24,8 +24,35 @@
 		return(true);
 	}
 
+	var audioTransition = function(outa,ina) {
+		var vol = 0.2;
+		var step = 0.05;
+		while (vol>0) {
+			audio[outa].volume = vol;
+			vol=vol-step;
+		}
+		audio[outa].pause();
+		audio[ina].currentTime=0;
+		audio[ina].volume=0;
+		audio[ina].play();
+		vol = 0;
+		while (vol<=0.4) {
+			audio[ina].volume = vol;
+			vol=vol+step;
+		}
+	}
+	
+	var audioUpVolume = function(aud,maxvol) {
+		var vol = 0;
+		var step = 0.05;
+		while (vol<=maxvol) {
+			audio[aud].volume = vol;
+			vol=vol+step;
+		}
+	}
+	
 	var p1 = {
-		speed : 85, 
+		speed : 85,
 		stopImageNumber : 1, 
 		duration : 3, 
 		startCallback : function() {
@@ -59,9 +86,7 @@
 			// Colocar la informacion en los campos del modal
 			$('#pregunta').text(question);
 					
-			audio["spin"].pause();
-			audio["qa"].currentTime=0
-			audio["qa"].play();
+			audioTransition("spin","qa");
 			
 			// Deshabilitar el boton de cerrar el modal hasta responder
 			// Habilitar el boton del modal al responder
@@ -84,7 +109,6 @@
         audio["normal"].play();
     });
 	audio["normal"].addEventListener("ended", function() {
-		audio["normal"].currentTime=0
 		audio["normal"].play();
 	});
     audio["spin"] = new Audio();
@@ -106,6 +130,7 @@
         audio["correct"].play();
     });	
 	audio["correct"].addEventListener("ended", function() {
+		audio["normal"].volume=0.3;
 		audio["normal"].play();
 	});
 	audio["error"] = new Audio();
@@ -115,6 +140,7 @@
         audio["error"].play();
     });	
 	audio["error"].addEventListener("ended", function() {
+		audio["normal"].volume=0.3;
 		audio["normal"].play();
 	});
 	audio["gover"] = new Audio();
@@ -125,7 +151,7 @@
     });	
 	audio["help"] = new Audio();
     audio["help"].src = "audio/jeopardy.mp3";
-	audio["help"].volume = 0.8;
+	audio["help"].volume = 0.4;
     audio["help"].addEventListener('load', function () {
         audio["help"].play();
     });
@@ -140,10 +166,7 @@
 		rouletter1.roulette('option', p1);
 		rouletter2.roulette('option', p2);
 		
-		audio["normal"].volume=0.2;
-		audio["normal"].pause();
-		audio["spin"].currentTime=0
-		audio["spin"].play();
+		audioTransition("normal","spin");
 		
 		rouletter1.roulette('start');	
 		rouletter2.roulette('start');	
