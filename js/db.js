@@ -90,7 +90,7 @@
  	}, {
  		"q": "¿Cuáles son las clases de equilibrio del organismo humano?",
  		"o": ["Espacial y automático", "Dinámico y espacial", "Estático y dinámico", "Ninguna de las anteriores"],
- 		"a": "1"
+ 		"a": "3"
  	}, {
  		"q": "¿Qué tipo de receptores se necargan de la audición?",
  		"o": ["Mecanoceptor", "Fotorreceptor", "Nociceptor", "Ninguna de las anteriores"],
