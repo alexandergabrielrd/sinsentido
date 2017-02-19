@@ -27,12 +27,16 @@
 	var audioTransition = function(outa,ina) {
 		var vol = 0.2;
 		var step = 0.05;
+		var  oldvol = audio[outa].volume;
 		while (vol>0) {
 			audio[outa].volume = vol;
 			vol=vol-step;
 		}
 		audio[outa].pause();
-		audio[ina].currentTime=0;
+		audio[outa].volume = oldvol;
+		if (ina!="normal") {
+			audio[ina].currentTime=0;
+		}
 		audio[ina].volume=0;
 		audio[ina].play();
 		vol = 0;
@@ -85,7 +89,10 @@
 			answer = QandAObj.qa[p1.stopImageNumber].list[p2.stopImageNumber].a;
 			// Colocar la informacion en los campos del modal
 			$('#pregunta').text(question);
-					
+			$('#o1').text(options[0]);
+			$('#o2').text(options[1]);
+			$('#o3').text(options[2]);
+			$('#o4').text(options[3]);
 			audioTransition("spin","qa");
 			
 			// Deshabilitar el boton de cerrar el modal hasta responder
@@ -256,24 +263,19 @@
 		restartGame();
 	});
 	
-	$('#help').click(function(){
-		audio["normal"].pause();
-		audio["help"].currentTime=0
-		audio["help"].play();
+	$('#help').click(function(){	
+		audioTransition("normal","help");
 		$("#helpModal").modal("show");
 	});
 	$('#helpModal').on('hide', function () {
-		audio["help"].pause();
-		audio["normal"].play();
+		audioTransition("help","normal");
 	})
 	
 	$('#helpModal').on('hidden.bs.modal', function (e) {
-		audio["help"].pause();
-		audio["normal"].play();
+		audioTransition("help","normal");
 	})
 	$('#hbtn').click(function(){
-		audio["help"].pause();
-		audio["normal"].play();
+		audioTransition("help","normal");
 	});
 
 	//Inicializar todas las imágenes opacas

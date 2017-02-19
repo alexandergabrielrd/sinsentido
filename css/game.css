@@ -135,7 +135,16 @@ div.roulette2 {
   
 	margin-bottom: 155px;
 }
-
+.modal-preg {
+font-size: 20px
+}
+.btn-modal{
+	outline: none;
+	}
+.modal-content{
+	border-radius: 20px;
+}
+	
 .modal-dialog {
 	margin: auto;
 	margin-top: 10%;

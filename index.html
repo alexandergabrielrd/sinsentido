@@ -29,8 +29,8 @@
 <script src="js/game.js"></script>
 
 
-<!-- fuente fredekona one-->
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fredoka+One">
+<!-- fuente -->
+<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Fredoka+One|Nunito|Open+Sans" rel="stylesheet">
 </head>
 
 <body>
@@ -68,10 +68,10 @@
 		</div>
 	</div>
 	<div class="col-sm-1 btn_container" >
-		<button class="start" style="font-family: 'Fredoka One', serif;"><p class="rotate">SPIN</p></button>
+		<button class="start" style="font-family: 'Fredoka One', serif;cursor:pointer;"><p class="rotate">SPIN</p></button>
 	</div>
 	<div class="col-sm-4" style="width: 395px;height: 430px;margin-left: 40px;padding-left: 8px;">
-		<div class="label-roulette2"style="font-family: 'Fredoka One', serif;"> PREGUNTA</div>
+		<div class="label-roulette2" style="font-family: 'Fredoka One', serif;"> PREGUNTA</div>
 		<div class="roulette2 r-preg" style="width:375px;height:375px;">
 			<img src="images/preg/Preg1.png" alt="Pregunta 1">
 			<img src="images/preg/Preg2.png" alt="Pregunta 2">
@@ -99,25 +99,24 @@
     <div class="modal-content">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal">&times;</button>
-			<h4 class="modal-title">PREGUNTA</h4>
+			<h4 id="pregunta" class="modal-preg" style="font-family: 'Nunito' ,serif;"><b>Pregunta....</b></h4>
 		</div>
 		<div class="modal-body">
-			<p id="pregunta">Esta es la pregunta....</p>
 			<div class="radio">
-				<label><input type="radio" name="optradio">Option 1</label>
+			  <label><input type="radio" name="optradio"><p id="o1">Option 1</p></label>
 			</div>
 			<div class="radio">
-			  <label><input type="radio" name="optradio">Option 2</label>
+			  <label><input type="radio" name="optradio"><p id="o2">Option 2</p></label>
 			</div>
 			<div class="radio">
-			  <label><input type="radio" name="optradio" >Option 3</label>
+			  <label><input type="radio" name="optradio" ><p id="o3">Option 3</p></label>
 			</div>
 			<div class="radio">
-			  <label><input type="radio" name="optradio">Option 4</label>
+			  <label><input type="radio" name="optradio"><p id="o4">Option 4</p></label>
 			</div>
 		</div>
 		<div class="modal-footer">
-			<button id="abtn" type="button" class="btn btn-default" data-dismiss="modal">Responder</button>
+			<button id="abtn" type="button" class="btn-modal" style="font-family: 'Nunito' ,serif;" data-dismiss="modal">RESPONDER</button>
 		</div>
     </div>
 
@@ -131,13 +130,13 @@
     <div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">GAME OVER!!!!</h4>
+				<h4 class="modal-title" style="font-family: 'Nunito' ,serif;">GAME OVER!!!!</h4>
 			</div>
 			<div class="modal-body">
 				<p id="pregunta">Felicitaciones....</p>
 			</div>
 			<div class="modal-footer">
-				<button id="gobtn" type="button" class="btn btn-default" data-dismiss="modal">Empezar de nuevo!!!</button>
+				<button id="gobtn" type="button" class="btn-modal" style="font-family: 'Nunito' ,serif;" data-dismiss="modal">EMPEZAR DE NUEVO</button>
 			</div>
     </div>
   </div>
@@ -150,7 +149,7 @@
     <div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">Te voy a ayudar!!!!</h4>
+				<h4 class="modal-title" style="font-family: 'Nunito' ,serif;">Instrucciones</h4>
 			</div>
 			<div class="modal-body">
 				<div id="myCarousel" class="carousel slide" data-interval="5000" data-ride="carousel">
@@ -193,7 +192,7 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button id="hbtn" type="button" class="btn btn-default" data-dismiss="modal">Quiero jugar!!!</button>
+				<button id="hbtn" type="button" class="btn-modal" style="font-family: 'Nunito' ,serif;" data-dismiss="modal">LISTO!</button>
 			</div>
     </div>
   </div>
