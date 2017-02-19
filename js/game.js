@@ -180,12 +180,14 @@
 	
 	var condition=true;
 	
+	
 	var checkAnswer = function() {
 		audio["qa"].pause();
 		// Verificar que la respuesta es correctati
 		condition=$('input[name=optradio]:checked').val()==answer;
 		console.log("seleccionado "+$('input[name=optradio]:checked').val());
 		console.log("answer "+answer);
+		$('input[name=optradio]:checked').prop('checked', false);
 		if (condition) {
 			audio["correct"].currentTime=0
 			audio["correct"].play();
