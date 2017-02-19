@@ -34,6 +34,7 @@
 		}
 		audio[outa].pause();
 		audio[outa].volume = oldvol;
+		audio[outa].pause();
 		if (ina!="normal") {
 			audio[ina].currentTime=0;
 		}
@@ -94,6 +95,7 @@
 			$('#o3').text(options[2]);
 			$('#o4').text(options[3]);
 			audioTransition("spin","qa");
+			audio["normal"].pause();
 			// Deshabilitar el boton de cerrar el modal hasta responder
 			// Habilitar el boton del modal al responder
 			$('#qaModal').modal('show');
@@ -178,9 +180,6 @@
 		rouletter2.roulette('start');	
 	});
 	
-	var condition=true;
-	
-	
 	var checkAnswer = function() {
 		audio["qa"].pause();
 		// Verificar que la respuesta es correctati
@@ -196,32 +195,17 @@
 			estatus[p1.stopImageNumber] = true;
 			// Revisar si todas están ok para terminar
 			if (allTrue(estatus)) {
-				// Termina el juego
-				console.log("GAME OVER!!!");
 				audio["gover"].currentTime=0
 				audio["gover"].play();
 				$('#goverModal').modal('show');
-			} else {
-				audio["normal"].play();
-				console.log(JSON.stringify(estatus));
-				console.log("GAME not OVER!!!");
 			}
-			condition=false;
-			console.log(JSON.stringify(estatus));
 		} else {
 			audio["error"].currentTime=0
 			audio["error"].play();
 			$("#"+p1.stopImageNumber).css('opacity' , opacity);
 			$("#"+p1.stopImageNumber).css('filter' , "grayscale(100%)");
-			
 			estatus[p1.stopImageNumber] = false;
-			condition=true;
-	
-			console.log(JSON.stringify(estatus));
 		}
-		// Cambiar la imagen del sentido en la parte superior
-		// A buena si la respuesta es buena a mala sino
-		console.log("qa modal closed");
 	}
 	
 	var restartGame = function() {
