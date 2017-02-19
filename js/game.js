@@ -132,7 +132,7 @@
         audio["qa"].play();
     });		
 	audio["correct"] = new Audio();
-    audio["correct"].src = "audio/correct.mp3";
+    audio["correct"].src = "audio/correct-a.mp3";
 	audio["correct"].volume = 0.6;
     audio["correct"].addEventListener('load', function () {
         audio["correct"].play();
@@ -142,7 +142,7 @@
 		audio["normal"].play();
 	});
 	audio["error"] = new Audio();
-    audio["error"].src = "audio/error.mp3";
+    audio["error"].src = "audio/wrong-a.mp3";
 	audio["error"].volume = 0.6;
     audio["error"].addEventListener('load', function () {
         audio["error"].play();

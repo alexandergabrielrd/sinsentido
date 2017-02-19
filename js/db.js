@@ -20,7 +20,7 @@
  		"o": ["Luz", "Sonido", "Olores", "Ninguna de las anteriores"],
  		"a": "3"
  	}, {
- 		"q": "¿Qué significa 'Piloereccion'?",
+ 		"q": "¿Qué significa 'Piloerección'?",
  		"o": ["Pene", "Piel de Gallina", "Escalofríos", "El término no existe"],
  		"a": "2"
  	}, {
@@ -32,7 +32,7 @@
  		"o": ["Diabetes", "Glaucoma", "Cataratas", "Todas las anteriores"],
  		"a": "4"
  	}, {
- 		"q": "¿Qué signica eltérmino 'Daltónico'?",
+ 		"q": "¿Qué signica el término 'Daltónico'?",
  		"o": ["No percibe colores", "Mal enfoque de las cosas", "Que tiene el iris deforme", "Nervio óptico inflamado"],
  		"a": "1"
  	}, {
@@ -44,7 +44,7 @@
  	"list": [{ //faltan 2 gusto
  		"q": "Pregunta gusto 1",
  		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
- 		"a": "1"
+ 		"a": "1"//faltaaaaa
  	}, {
  		"q": "¿Cuántos sabores pueden distinguir los quimiorreceptores de la lengua?",
  		"o": ["6", "5", "7", "3"],
@@ -52,15 +52,15 @@
  	}, {
  		"q": "¿En qué procesos interviene la lengua?",
  		"o": ["Masticación", "Habla", "Todas las anteriores", "Ninguna de las anteriores"],
- 		"a": "1"
+ 		"a": "3"
  	}, {
  		"q": "Sentimos calor en la lengua gracias a...",
  		"o": ["Papilas filiformes", "Papilas fungiformes", "Papilas caliciformes", "Todas las anteriores"],
  		"a": "1"
  	}, {
- 		"q": "¿Porque la lengua tiene apariencia rugosa? Gracias a...",
- 		"o": ["Las papilas gustativas", "El roce con el paladar", "Todas las anteriores", "Ninguna de las anteriores"],
- 		"a": "1"
+ 		"q": "¿Porqué la lengua tiene apariencia rugosa? Gracias a...",
+ 		"o": ["El roce con el paladar", "Las papilas gustativas", "Todas las anteriores", "Ninguna de las anteriores"],
+ 		"a": "2"
  	}, {
  		"q": "¿Cuál tipo de papila gustativa se encargan de percibir el sabor salado?",
  		"o": ["Filiforme", "Fungiforme", "Caliciforme", "Ninguna de las anteriores"],
@@ -72,11 +72,11 @@
  	}, {
  		"q": "Pregunta gusto 8",
  		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
- 		"a": "1"
+ 		"a": "1"//faltaaaaa
  	}, {
  		"q": "¿Qué nervios intervienen en el gusto?",
  		"o": ["VII y V", "IX, VII y X", "Todos los anteriores", "II y IX"],
- 		"a": "1"
+ 		"a": "2"
  	}, {
  		"q": "¿Cuál de estas afirmacioes es correcta?",
  		"o": ["El sabor 'umami' fue descubrierto por un japonés", "La papila filiforme capta lo salado", "Las quimiorreceptores se encuentran en los botones gustativo", "Ninguna es correcta"],
