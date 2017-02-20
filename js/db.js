@@ -78,7 +78,7 @@
  		"o": ["VII y V", "IX, VII y X", "Todos los anteriores", "II y IX"],
  		"a": "2"
  	}, {
- 		"q": "¿Cuál de estas afirmacioes es correcta?",
+ 		"q": "¿Cuál de estas afirmaciones es correcta?",
  		"o": ["El sabor 'umami' fue descubrierto por un japonés", "La papila filiforme capta lo salado", "Las quimiorreceptores se encuentran en los botones gustativo", "Ninguna es correcta"],
  		"a": "1"
  	}]
