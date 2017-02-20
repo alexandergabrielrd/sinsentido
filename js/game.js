@@ -83,6 +83,9 @@
     audio["qa"].addEventListener('load', function () {
         audio["qa"].play();
     });		
+	audio["qa"].addEventListener("ended", function() {
+		audio["qa"].play();
+	});
 	
 	audio["correct"] = new Audio();
     audio["correct"].src = "audio/correct-a.mp3";
@@ -119,6 +122,7 @@
 	audio["gover"].addEventListener("ended", function() {
 		audio["normal"].volume=0.3;
 		audio["normal"].play();
+		$('.start').removeAttr('disabled');
 	});
 	
 	audio["help"] = new Audio();
@@ -223,6 +227,7 @@
 		$('.categorias').children().css('opacity' , opacity);
 		for (var i = 0; i < estatus.length; ++i) { estatus[i] = false; }
 		audio["normal"].play();
+		$('.start').removeAttr('disabled');
 	}
 	
 	// Manejo de eventos
