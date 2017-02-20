@@ -92,7 +92,7 @@
  		"o": ["Espacial y automático", "Dinámico y espacial", "Estático y dinámico", "Ninguna de las anteriores"],
  		"a": "3"
  	}, {
- 		"q": "¿Qué tipo de receptores se necargan de la audición?",
+ 		"q": "¿Qué tipo de receptores se encargan de la audición?",
  		"o": ["Mecanoceptor", "Fotorreceptor", "Nociceptor", "Ninguna de las anteriores"],
  		"a": "4"
  	}, {
@@ -134,7 +134,7 @@
  		"o": ["Cretoides", "Zetoides", "Etmoides", "Zeptoides"],
  		"a": "3"
  	}, {
- 		"q": "¿Cuáles son las células que se asocian a las olfatorias?",
+ 		"q": "¿Cuáles son las células que se asocian a las células olfatorias?",
  		"o": ["Glandulares y ciliares", "Ciliares y sustentaculares", "Glandulares y sustentaculares", "Todas las anteriores"],
  		"a": "3"
  	},{

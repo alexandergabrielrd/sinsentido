@@ -302,9 +302,9 @@
 	
 	$('#mute').click(function(){	
 		toggleMute();
-		var src = ($(this).attr('src') === 'images/categorias/coronaA.png')
-            ? 'images/categorias/lenguaA.png'
-            : 'images/categorias/coronaA.png';
+		var src = ($(this).attr('src') === 'images/mini-btn/sound.png')
+            ? 'images/mini-btn/mute.png'
+            : 'images/mini-btn/sound.png';
          $(this).attr('src', src);
 	});
 	
