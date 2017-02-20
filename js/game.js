@@ -152,6 +152,20 @@
 		return(true);
 	}
 
+	var toggleMute = function() {
+		var audios = ["normal","spin","qa","correct","error","gover","help"];
+		
+		if (audio[audios[0]].muted) {
+			for (var i = 0; i < audios.length; ++i) {
+				audio[audios[i]].muted = false;
+			}			
+		} else {
+			for (var i = 0; i < audios.length; ++i) {
+				audio[audios[i]].muted = true;
+			}			
+		}
+	}
+	
 	var audioTransition = function(outa,ina) {
 		var vol = 0.2;
 		var step = 0.05;
@@ -202,7 +216,7 @@
 			$("#"+p1.stopImageNumber).css('opacity' , 1);
 			$("#"+p1.stopImageNumber).css('filter' , "none");
 			estatus[p1.stopImageNumber] = true;
-			
+
 			// Revisar si todas están ok para terminar
 			if (allTrue(estatus)) {
 				audio["gover"].currentTime=0
@@ -216,7 +230,7 @@
 			
 			$("#"+p1.stopImageNumber).css('opacity' , opacity);
 			$("#"+p1.stopImageNumber).css('filter' , "grayscale(100%)");
-			
+
 			estatus[p1.stopImageNumber] = false;
 		}
 	}
