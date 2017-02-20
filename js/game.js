@@ -300,6 +300,10 @@
 		$("#helpModal").modal("show");
 	});
 	
+	$('#mute').click(function(){	
+		toggleMute();
+	});
+	
 	$('#helpModal').on('hide', function () {
 		audioTransition("help","normal");
 	});
