@@ -1,60 +1,17 @@
 ﻿$(function(){
-	
+	// Declaracion de variables
 	var question;
 	var	options;
 	var	answer;
 	var opacity = 0.35;
 	
-	var appendLogMsg = function(msg) {
-		console.log(msg);
-	}
+	var estatus = new Array(6);
 	
-	function randomIntFromInterval(min,max) {
-		return Math.floor(Math.random()*(max-min+1)+min);
-	}
-
-	var allTrue = function(boolarray) {
-		for (var i = 0; i < boolarray.length; ++i) { 
-			if (boolarray[i]) {
-				continue;
-			} else {
-				return(false);
-			}
-		}
-		return(true);
-	}
-
-	var audioTransition = function(outa,ina) {
-		var vol = 0.2;
-		var step = 0.05;
-		var  oldvol = audio[outa].volume;
-		while (vol>0) {
-			audio[outa].volume = vol;
-			vol=vol-step;
-		}
-		audio[outa].pause();
-		audio[outa].volume = oldvol;
-		audio[outa].pause();
-		if (ina!="normal") {
-			audio[ina].currentTime=0;
-		}
-		audio[ina].volume=0;
-		audio[ina].play();
-		vol = 0;
-		while (vol<=0.4) {
-			audio[ina].volume = vol;
-			vol=vol+step;
-		}
-	}
+	var normalflow = false;
 	
-	var audioUpVolume = function(aud,maxvol) {
-		var vol = 0;
-		var step = 0.05;
-		while (vol<=maxvol) {
-			audio[aud].volume = vol;
-			vol=vol+step;
-		}
-	}
+	// Creacion de las dos ruletas
+	var rouletter1 = $('div.roulette1');
+	var rouletter2 = $('div.roulette2');
 	
 	var p1 = {
 		speed : 85,
@@ -96,12 +53,9 @@
 			
 			$('#qaModal').modal('show');
 		}
-
 	}
 	
-	var rouletter1 = $('div.roulette1');
-	var rouletter2 = $('div.roulette2');
-	
+	// Inicializacion de las ruletas
 	rouletter1.roulette(p1);	
 	rouletter2.roulette(p2);
 	
@@ -115,18 +69,21 @@
 	audio["normal"].addEventListener("ended", function() {
 		audio["normal"].play();
 	});
+	
     audio["spin"] = new Audio();
     audio["spin"].src = "audio/slot.mp3";
 	audio["spin"].volume = 0.5;
     audio["spin"].addEventListener('load', function () {
         audio["spin"].play();
     });
+	
     audio["qa"] = new Audio();
     audio["qa"].src = "audio/jeopardy.mp3";
 	audio["qa"].volume = 0.4;
     audio["qa"].addEventListener('load', function () {
         audio["qa"].play();
     });		
+	
 	audio["correct"] = new Audio();
     audio["correct"].src = "audio/correct-a.mp3";
 	audio["correct"].volume = 0.6;
@@ -134,10 +91,13 @@
         audio["correct"].play();
     });	
 	audio["correct"].addEventListener("ended", function() {
-		audio["normal"].volume=0.3;
-		audio["normal"].play();
-		$('.start').removeAttr('disabled');
+		if (!allTrue(estatus)) {
+			audio["normal"].volume=0.3;
+			audio["normal"].play();
+			$('.start').removeAttr('disabled');
+		}
 	});
+	
 	audio["error"] = new Audio();
     audio["error"].src = "audio/wrong-a.mp3";
 	audio["error"].volume = 0.6;
@@ -149,12 +109,18 @@
 		audio["normal"].play();
 		$('.start').removeAttr('disabled');
 	});
+	
 	audio["gover"] = new Audio();
     audio["gover"].src = "audio/gover.mp3";
 	audio["gover"].volume = 0.8;
     audio["gover"].addEventListener('load', function () {
         audio["gover"].play();
     });	
+	audio["gover"].addEventListener("ended", function() {
+		audio["normal"].volume=0.3;
+		audio["normal"].play();
+	});
+	
 	audio["help"] = new Audio();
     audio["help"].src = "audio/jeopardy.mp3";
 	audio["help"].volume = 0.4;
@@ -164,6 +130,102 @@
 	audio["help"].addEventListener('ended', function () {
         audio["help"].play();
     });
+	
+	
+	// Declaracion de funciones
+	function randomIntFromInterval(min,max) {
+		return Math.floor(Math.random()*(max-min+1)+min);
+	}
+
+	var allTrue = function(boolarray) {
+		for (var i = 0; i < boolarray.length; ++i) { 
+			if (boolarray[i]) {
+				continue;
+			} else {
+				return(false);
+			}
+		}
+		return(true);
+	}
+
+	var audioTransition = function(outa,ina) {
+		var vol = 0.2;
+		var step = 0.05;
+		var  oldvol = audio[outa].volume;
+		while (vol>0) {
+			audio[outa].volume = vol;
+			vol=vol-step;
+		}
+		
+		audio[outa].pause();
+		audio[outa].volume = oldvol;
+
+		if (ina!="normal") {
+			audio[ina].currentTime=0;
+		}
+		
+		audio[ina].volume=0;
+		audio[ina].play();
+		
+		vol = 0;
+		while (vol<=0.4) {
+			audio[ina].volume = vol;
+			vol=vol+step;
+		}
+	}
+	
+	var audioUpVolume = function(aud,maxvol) {
+		var vol = 0;
+		var step = 0.05;
+		while (vol<=maxvol) {
+			audio[aud].volume = vol;
+			vol=vol+step;
+		}
+	}
+	
+	var checkAnswer = function() {
+		audio["qa"].pause();
+		// Verificar que la respuesta es correcta
+		condition=$('input[name=optradio]:checked').val()==answer;
+		
+		// Deschequear las opciones de la ventana de pregunta y respuesta
+		$('input[name=optradio]:checked').prop('checked', false);
+		
+		if (condition) {
+			audio["correct"].currentTime=0
+			audio["correct"].play();
+			
+			$("#"+p1.stopImageNumber).css('opacity' , 1);
+			$("#"+p1.stopImageNumber).css('filter' , "none");
+			estatus[p1.stopImageNumber] = true;
+			
+			// Revisar si todas están ok para terminar
+			if (allTrue(estatus)) {
+				audio["gover"].currentTime=0
+				audio["gover"].play();
+				
+				$('#goverModal').modal('show');
+			}
+		} else {
+			audio["error"].currentTime=0
+			audio["error"].play();
+			
+			$("#"+p1.stopImageNumber).css('opacity' , opacity);
+			$("#"+p1.stopImageNumber).css('filter' , "grayscale(100%)");
+			
+			estatus[p1.stopImageNumber] = false;
+		}
+	}
+	
+	var restartGame = function() {
+		//Inicializar todas las imágenes opacas
+		$('.categorias').children().css('filter' , "grayscale(100%)");
+		$('.categorias').children().css('opacity' , opacity);
+		for (var i = 0; i < estatus.length; ++i) { estatus[i] = false; }
+		audio["normal"].play();
+	}
+	
+	// Manejo de eventos
 	
 	$('.start').click(function(){
 		p1.stopImageNumber = randomIntFromInterval(0,QandAObj.qa.length-1);
@@ -178,47 +240,13 @@
 		rouletter2.roulette('start');	
 	});
 	
-	var checkAnswer = function() {
-		audio["qa"].pause();
-		// Verificar que la respuesta es correctati
-		condition=$('input[name=optradio]:checked').val()==answer;
-		// Deschequear las opciones de la ventana de pregunta y respuesta
-		$('input[name=optradio]:checked').prop('checked', false);
-		if (condition) {
-			audio["correct"].currentTime=0
-			audio["correct"].play();
-			$("#"+p1.stopImageNumber).css('opacity' , 1);
-			$("#"+p1.stopImageNumber).css('filter' , "none");
-			estatus[p1.stopImageNumber] = true;
-			// Revisar si todas están ok para terminar
-			if (allTrue(estatus)) {
-				audio["gover"].currentTime=0
-				audio["gover"].play();
-				$('#goverModal').modal('show');
-			}
-		} else {
-			audio["error"].currentTime=0
-			audio["error"].play();
-			$("#"+p1.stopImageNumber).css('opacity' , opacity);
-			$("#"+p1.stopImageNumber).css('filter' , "grayscale(100%)");
-			estatus[p1.stopImageNumber] = false;
-		}
-	}
-	
-	var restartGame = function() {
-		//Inicializar todas las imágenes opacas
-		$('.categorias').children().css('filter' , "grayscale(100%)");
-		$('.categorias').children().css('opacity' , opacity);
-		for (var i = 0; i < estatus.length; ++i) { estatus[i] = false; }
-	}
-	
 	$('#qaModal').on('hide', function () {
 		if (!normalflow){
 			checkAnswer();
 		} else {
 			normalflow = false;
 		}
-	})
+	});
 	
 	$('#qaModal').on('hidden.bs.modal', function (e) {
 		if (!normalflow){
@@ -226,7 +254,7 @@
 		} else {
 			normalflow = false;
 		}
-	})
+	});
 
 	$('#abtn').click(function(){
 		normalflow = true;
@@ -236,12 +264,12 @@
 	$('#goverModal').on('hide', function () {
 		audio["gover"].pause();
 		restartGame();
-	})
+	});
 	
 	$('#goverModal').on('hidden.bs.modal', function (e) {
 		audio["gover"].pause();
 		restartGame();
-	})
+	});
 	
 	$('#gobtn').click(function(){
 		audio["gover"].pause();
@@ -252,23 +280,19 @@
 		audioTransition("normal","help");
 		$("#helpModal").modal("show");
 	});
+	
 	$('#helpModal').on('hide', function () {
 		audioTransition("help","normal");
-	})
+	});
 	
 	$('#helpModal').on('hidden.bs.modal', function (e) {
 		audioTransition("help","normal");
-	})
+	});
+	
 	$('#hbtn').click(function(){
 		audioTransition("help","normal");
 	});
 
-	//Inicializar todas las imágenes opacas
-	$('.categorias').children().css('filter' , "grayscale(100%)");
-	$('.categorias').children().css('opacity' , opacity);
-	var estatus = new Array(6);
-	for (var i = 0; i < estatus.length; ++i) { estatus[i] = false; }
-	audio["normal"].play();
-	var normalflow = false;
 
+	restartGame();
 });
