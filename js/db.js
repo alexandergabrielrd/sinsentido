@@ -32,7 +32,7 @@
  		"o": ["Diabetes", "Glaucoma", "Cataratas", "Todas las anteriores"],
  		"a": "4"
  	}, {
- 		"q": "¿Qué signica el término 'Daltónico'?",
+ 		"q": "¿Qué significa el término 'Daltónico'?",
  		"o": ["No percibe colores", "Mal enfoque de las cosas", "Que tiene el iris deforme", "Nervio óptico inflamado"],
  		"a": "1"
  	}, {
