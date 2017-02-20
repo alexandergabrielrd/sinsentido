@@ -302,6 +302,10 @@
 	
 	$('#mute').click(function(){	
 		toggleMute();
+		var src = ($(this).attr('src') === 'images/categorias/coronaA.png')
+            ? 'images/categorias/lenguaA.png'
+            : 'images/categorias/coronaA.png';
+         $(this).attr('src', src);
 	});
 	
 	$('#helpModal').on('hide', function () {
