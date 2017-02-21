@@ -164,8 +164,10 @@ button.start{
 	border-bottom: 0px;
 }
 
-.modal-body p{
+
+.modal-body p {
 	font-family: 'Nunito' ,serif; 
+	font-size: 22px;
 	color: #ffffff;
 }
 
