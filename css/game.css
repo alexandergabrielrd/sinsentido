@@ -100,7 +100,9 @@ div.roulette2 {
 
 button.start{
 	font-family: 'Fredoka One', serif;
-	cursor:pointer;}
+	cursor:pointer;
+}
+
 .btn_container {
 	text-align:center;
 	outline: none;
@@ -268,4 +270,6 @@ button.start{
 	padding-left: 8px;
 }
 
-
+input[type='radio'] {   
+    margin: 8px 0 0;
+ }
