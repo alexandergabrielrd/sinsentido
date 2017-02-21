@@ -12,7 +12,7 @@
 .categorias {
 	top: 10px;
 	width:525px;
-	height: 106px;
+	height: 95px;
 	background-color: #ffffff;
 	border: 5px solid #ffffff;
 	border-radius: 50px;
@@ -25,6 +25,7 @@
 	height:70px;
 }
 
+
 img #help {
 	cursor:pointer;
 }
@@ -34,10 +35,11 @@ img #mute {
 }
 .instrucciones {
 	margin-top: 10px;}
-	
+
 .instrucciones img {
 	height: 40px;
 	width:40px;
+	margin-left: 6px;
 }
 .label-roulette1 {
 	font-family: 'Fredoka One', serif;
@@ -156,14 +158,31 @@ button.start{
   
 	margin-bottom: 155px;
 }
-.modal-preg {
-font-size: 20px
+
+/* modal*/
+.modal-header {
+	border-bottom: 0px;
 }
-.btn-modal{
+
+.modal-body p{
+	font-family: 'Nunito' ,serif; 
+	color: #ffffff;
+}
+
+.modal-footer {
+	border-top: 0px;
+}
+	
+.btn-modal /*este esel boton para cerrar responder*/{
 	outline: none;
+	background-color: #1a7195; 
+	border: 3px solid white;
+	border-radius: 10px;
 	}
+	
 .modal-content{
 	border-radius: 20px;
+	background-color: #1a7195;
 }
 	
 .modal-dialog {
@@ -182,7 +201,9 @@ font-size: 20px
  
  .modal-title, .btn-modal {
 	font-family: 'Nunito' ,serif;
+	color: #ffffff;
 }
+
 
 .col-1 {
 	width:365px;
@@ -196,5 +217,4 @@ font-size: 20px
 	padding-left: 8px;
 }
 
-.instrucciones img {
-	margin-left: 6px;}
+
