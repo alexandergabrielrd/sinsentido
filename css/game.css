@@ -175,18 +175,69 @@ button.start{
 	border-top: 0px;
 }
 	
-.btn-modal /*este esel boton para cerrar responder*/{
+.btn-modal-inst /*este esel boton para instrucciones*/{
+    width: 78px;
+    height: 38px;
 	outline: none;
 	background-color: #1a7195; 
-	border: 3px solid white;
+	border: 3px solid #1a7195;
 	border-radius: 10px;
+	font-family: 'Nunito',serif;
+	color: white;
+	font-size: 17px;
+	transition-duration: 0.2s;
+	}
+
+.btn-modal-inst:hover {
+	width: 84px;
+    height: 42px;
+	outline: none;
+	background-color: white; 
+	border: 3px solid #1a7195;
+	border-radius: 10px;
+	font-family: 'Nunito',serif;
+	color: #1a7195;
+	font-size: 20px;
+	}
+	
+.btn-modal-preg /*este esel boton para preguntas*/{
+    width: 130px;
+    height: 38px;
+	outline: none;
+	background-color: #1a7195; 
+	border: 3px solid #1a7195;
+	border-radius: 10px;
+	font-family: 'Nunito',serif;
+	color: white;
+	font-size: 17px;
+	transition-duration: 0.2s;
+	}
+
+.btn-modal-preg:hover {
+	width: 137px;
+    height: 42px;
+	outline: none;
+	background-color: white; 
+	border: 3px solid #1a7195;
+	border-radius: 10px;
+	font-family: 'Nunito',serif;
+	color: #1a7195;
+	font-size: 20px;
 	}
 	
 .modal-content{
 	border-radius: 20px;
 	background-color: #1a7195;
 }
-	
+
+.modal-title.inst{
+	font-size: 25px;
+}
+
+.modal-title {
+	font-size: 20px;
+}
+
 .modal-dialog {
 	margin: auto;
 	margin-top: 10%;
@@ -201,7 +252,7 @@ button.start{
 	background-image: none;
  }
  
- .modal-title, .btn-modal {
+ .modal-title {
 	font-family: 'Nunito' ,serif;
 	color: #ffffff;
 }
