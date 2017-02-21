@@ -4,6 +4,11 @@
 	padding-bottom: 20px;
 }
 
+img .logo {
+	width:400px;
+	height: auto;
+}
+
 .categorias {
 	top: 10px;
 	width:525px;
@@ -20,6 +25,13 @@
 	height:70px;
 }
 
+img #help {
+	cursor:pointer;
+}
+
+img #mute {
+	cursor:pointer;
+}
 .instrucciones {
 	margin-top: 10px;}
 	
@@ -28,6 +40,7 @@
 	width:40px;
 }
 .label-roulette1 {
+	font-family: 'Fredoka One', serif;
 	margin-top: 24px;
 	font-size: 25px;
 	text-align: left;
@@ -37,6 +50,7 @@
 }
 
 .label-roulette2 {
+	font-family: 'Fredoka One', serif;
 	margin-top: 24px;
 	font-size: 25px;
 	text-align: left;
@@ -46,6 +60,8 @@
 }
 
 div.roulette1 {
+	width: 375px;
+	height: 375px;
 	margin-top: 10px;
 	float: left;
 	border: 10px  solid #ffffff;
@@ -63,6 +79,8 @@ div.roulette1 {
 }
 
 div.roulette2 {
+	width:375px;
+	height:375px;
 	margin-top: 10px;
 	float: right;
 	border: 10px  solid #ffffff;
@@ -79,6 +97,9 @@ div.roulette2 {
 	height:350px;
 }
 
+button.start{
+	font-family: 'Fredoka One', serif;
+	cursor:pointer;}
 .btn_container {
 	text-align:center;
 	outline: none;
@@ -158,3 +179,20 @@ font-size: 20px
  .carousel-control.left, .carousel-control.right {
 	background-image: none;
  }
+ 
+ .modal-title, .btn-modal {
+	font-family: 'Nunito' ,serif;
+}
+
+.col-1 {
+	width:365px;
+	height:430px
+}
+	
+.col-2 {
+	width: 395px;
+	height: 430px;
+	margin-left: 40px;
+	padding-left: 8px;
+}
+
