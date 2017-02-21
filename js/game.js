@@ -28,6 +28,9 @@
 		}
 	}
 	
+	var qaTimer = 0;
+	var interv;
+	
 	var p2 = {
 		speed : 65, 
 		stopImageNumber : 2, 
@@ -51,7 +54,27 @@
 			audioTransition("spin","qa");
 			audio["normal"].pause();
 			
+			qaTimer=0;
+			$( "#progressbar" ).progressbar({
+				value: qaTimer
+			});
+			
 			$('#qaModal').modal('show');
+			
+			interv = setInterval(function(){ 
+				if (qaTimer==100) {
+					$( "#progressbar" ).progressbar({
+						value: qaTimer
+					});
+					$('#abtn').click();
+				} else {
+					$( "#progressbar" ).progressbar({
+						value: qaTimer
+					});
+					qaTimer = qaTimer + 10;
+				}
+			}, 1000);
+
 		}
 	}
 	
@@ -261,6 +284,7 @@
 	
 	$('#qaModal').on('hide', function () {
 		if (!normalflow){
+			clearInterval(interv);
 			checkAnswer();
 		} else {
 			normalflow = false;
@@ -269,6 +293,7 @@
 	
 	$('#qaModal').on('hidden.bs.modal', function (e) {
 		if (!normalflow){
+			clearInterval(interv);
 			checkAnswer();
 		} else {
 			normalflow = false;
@@ -276,6 +301,7 @@
 	});
 
 	$('#abtn').click(function(){
+		clearInterval(interv);
 		normalflow = true;
 		checkAnswer();
 	});
@@ -319,6 +345,7 @@
 	$('#hbtn').click(function(){
 		audioTransition("help","normal");
 	});
+
 
 
 	restartGame();
