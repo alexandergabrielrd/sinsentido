@@ -4,15 +4,15 @@
 	padding-bottom: 20px;
 }
 
-img .logo {
-	width:400px;
+.logo {
+	width: 400px;
 	height: auto;
 }
 
 .categorias {
 	top: 10px;
 	width:525px;
-	height: 106;
+	height: 106px;
 	background-color: #ffffff;
 	border: 5px solid #ffffff;
 	border-radius: 50px;
@@ -186,7 +186,7 @@ font-size: 20px
 
 .col-1 {
 	width:365px;
-	height:430px
+	height:430px;
 }
 	
 .col-2 {
@@ -196,3 +196,5 @@ font-size: 20px
 	padding-left: 8px;
 }
 
+.instrucciones img {
+	margin-left: 6px;}
