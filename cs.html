@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html>
+<title>Sin 5entido</title>
+<head>
+	<link rel="icon" type="image/png" href="images/favicon1.png"/>
+</head>
 <style>
+@font-face {
+    font-family: Pathway;
+    src: url(fonts/PathwayGothicOne-Regular.ttf);
+}
+
 body, html {
+	width: 100%;
     height: 100%;
+	overflow: hidden;
     margin: 0;
 }
 
 .bgimg {
+    background-image: url('images/images-background/8.png');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.bgimg p {
+	position: relative;
     color: white;
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Pathway", Courier, monospace;
     font-size: 25px;
 }
- 
-.franja {
-	width: 100%;
-	min-height:300px;
-	background-color: #ff5c5c;
-	margin: auto;
-}
-	
+
 .topleft {
     position: absolute;
     top: 0;
-    left: 16px;
+   right: 16px;
 }
 
 .bottomleft {
     position: absolute;
     bottom: 0;
-    left: 16px;
+    right: 16px;
 }
 
 .middle {
@@ -41,24 +53,18 @@ body, html {
 
 hr {
     margin: auto;
-    width: 40%;
+    width: 80%;
 }
 </style>
 <body>
 
 <div class="bgimg">
-  <div class="topleft">
-    <p>Logo</p>
-  </div>
-	  <div class="middle">
-		<h1>COMING SOON</h1>
+ 	<div class="middle">
+		<p style="font-size:40px;letter-spacing: 5px;margin-bottom: 10px;">SIN 5ENTIDO</p>
 		<hr>
-		<p id="demo" style="font-size:30px"></p>
-	  </div>
-	
-  <div class="bottomleft">
-    <p>Some text</p>
-  </div>
+		<p id="demo" style="font-size:75px;margin: 15px 0px;"></p>
+		<p>ARamirez<sup>2</sup></p>
+	</div>
 </div>
 
 <script>
@@ -78,11 +84,25 @@ var countdownfunction = setInterval(function() {
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	
+	if (seconds<10) {
+	 seconds = "0"+seconds;
+	}
+	
+	if (minutes<10) {
+	 minutes = "0"+minutes;
+	}
+	
+	if (hours<10) {
+	 hours = "0"+hours;
+	}
+	
     
     // Output the result in an element with id="demo"
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
+    document.getElementById("demo").innerHTML = days + "d " + hours + " : "
+    + minutes + " : " + seconds ;
     
     // If the count down is over, write some text 
     if (distance < 0) {
