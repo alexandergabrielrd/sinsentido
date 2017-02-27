@@ -67,7 +67,7 @@ div.roulette1 {
 	float: left;
 	border: 10px  solid #ffffff;
 	border-radius: 14px;
-	border-right-width: 15px;
+	border-right-width: 17px;
 }	
 
 .r-categ {
@@ -86,7 +86,7 @@ div.roulette2 {
 	float: right;
 	border: 10px  solid #ffffff;
 	border-radius: 14px;
-	border-right-width: 15px;
+	border-right-width: 17px;
 }
 
 .r-preg {
@@ -166,7 +166,7 @@ button.start{
 }
 
 .modal-header  h1 {
-	font-size: 32px;
+	font-size: 28px;
 }
 
 .modal-body p {
@@ -204,6 +204,12 @@ button.start{
 	margin-top: 5%;
 } 
 	
+#progressbar {
+	margin-top: 10px;
+	width: 100%;
+	height: 20px;
+}
+	
 .btn-modal-inst /*este es el boton para instrucciones*/{
     width: 78px;
     height: 38px;
@@ -230,7 +236,8 @@ button.start{
 	}
 	
 .btn-modal-preg /*este es el boton para preguntas*/{
-    width: 130px;
+    margin-bottom: 5px;
+	width: 130px;
     height: 38px;
 	outline: none;
 	background-color: #1a7195; 
@@ -243,7 +250,33 @@ button.start{
 }
 
 .btn-modal-preg:hover {
+	margin-bottom: 5px;
 	width: 137px;
+    height: 42px;
+	outline: none;
+	background-color: white; 
+	border: 3px solid #1a7195;
+	border-radius: 10px;
+	font-family: 'Nunito',serif;
+	color: #1a7195;
+	font-size: 20px;
+}
+
+.btn-modal-go /*este es el boton de game over*/{
+    width: 200px;
+    height: 38px;
+	outline: none;
+	background-color: #1a7195; 
+	border: 3px solid #1a7195;
+	border-radius: 10px;
+	font-family: 'Nunito',serif;
+	color: white;
+	font-size: 17px;
+	transition-duration: 0.2s;
+}
+
+.btn-modal-go:hover {
+	width: 240px;
     height: 42px;
 	outline: none;
 	background-color: white; 
