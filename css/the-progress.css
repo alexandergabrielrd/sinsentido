@@ -1,0 +1,116 @@
+body, html {
+    height: 100%;
+}
+
+.parallax {
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	position:relative;
+}
+
+.header {
+	box-shadow: 5px 5px 20px rgba(158, 158, 158, 0.42);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 55px;
+	background-color: white;
+	z-index: 2;
+}
+
+.logo {
+	border: 5px solid white;
+	border-radius: 100%;
+	background-color: white;
+	box-shadow: 0px 15px 20px rgba(158, 158, 158, 0.42);
+	margin: 7px 0px 0px 30px;
+	height: 80px;
+	width: auto;
+}
+
+.titulo {
+	display: inline-block;
+	top: 3px;
+}
+
+.titulo p{
+	font-family: 'Fugaz One',serif;
+	padding: 0px 0px 0px 10px;
+	top: 3px;
+	font-size: 27px;
+}
+
+.play{
+	position: absolute;
+	margin: 18px 8px 8px 8px;
+	color: #3d3d3d;
+	font-size: 16px;
+	font-family: 'Roboto',serif;
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding: 4px;
+	transition: 0.3s;
+}
+.play:hover{
+	position: absolute;
+	margin: 17px 8px 8px 8px;
+	color: #ffffff;
+	font-size: 16px;
+	font-family: 'Roboto',serif;
+	background-color: #1a7195;
+	border: 2px solid #1a7195;
+	border-radius: 13px;
+	padding: 4px;
+}
+b {
+	font-size: 35px;
+}
+
+p {
+	padding: 20px 70px;
+	font-family: 'Roboto', serif;
+	font-size: 17px;
+}
+
+.step.tp {
+	font-family: 'Fugaz One', serif;
+	font-size: 65px;
+	color: #ffffff;
+	text-align: right;
+	position: absolute;
+    top: 40%;
+    left: 74%;
+    transform: translate(-50%,-50%);
+	z-index: 1;
+}
+
+.step.ar {
+	font-family: 'Fugaz One', serif;
+	font-size: 25px;
+	color: #ffffff;
+	text-align: left;
+	position: absolute;
+    top: 90%;
+    left: 12%;
+    transform: translate(-50%,-50%);
+	z-index: 1;
+}
+
+.step {
+	font-family: 'Fugaz One', serif;
+	font-size: 75px;
+	color: #ffffff;
+	text-align: left;
+	padding: 10px 15px;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+	z-index: 1;
+}
