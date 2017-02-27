@@ -1,9 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-<title>5in 5entido</title>
+<title>Sin 5entido</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--favicon--->
+<link rel="icon" type="image/png" href="images/favicon.png"/>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="css/libs/bootstrap.min.css">
 <!-- Optional theme -->
@@ -51,7 +53,7 @@
 <div class="row">
 	<div class="col-sm-1"></div>
 	<div class="col-sm-5">
-		<img class="logo" src="images/logo-juego.png" alt="SIN 5ENTIDO">
+		<img class="logo" src="images/logo.png" alt="SIN 5ENTIDO">
 	</div>
 	<div class="categorias col-sm-5">
  	 	<img id="0" src="images/categorias/coronaA.png" alt="Corona">
@@ -112,10 +114,10 @@
   <div class="modal-dialog">
 
     <!-- Modal content-->
-    <div class="modal-content">
+    <div class="modal-content preg">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal">&times;</button>
-			<h4 id="pregunta" class="modal-title"><b>Pregunta....</b></h4>
+			<h1 id="pregunta" class="modal-title"><b>Pregunta....</b></h1>
 		</div>
 		<div id="radioctl" class="modal-body">
 			<div class="radio">
@@ -132,7 +134,12 @@
 			</div>
 		</div>
 		<div class="modal-footer">
-			<button id="abtn" type="button" class="btn-modal" data-dismiss="modal">RESPONDER</button>
+			<div class="col-sm-8" >
+				<div id="progressbar"></div>
+			</div>
+			<div class="col-sm-4" >
+				<button id="abtn" type="button" class="btn-modal-preg" data-dismiss="modal">RESPONDER</button>
+			</div>
 		</div>
     </div>
 
@@ -152,7 +159,7 @@
 				<p id="pregunta">Felicitaciones....</p>
 			</div>
 			<div class="modal-footer">
-				<button id="gobtn" type="button" class="btn-modal" data-dismiss="modal">EMPEZAR DE NUEVO</button>
+				<button id="gobtn" type="button" class="btn-modal-go" data-dismiss="modal">EMPEZAR DE NUEVO</button>
 			</div>
     </div>
   </div>
@@ -208,7 +215,7 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button id="hbtn" type="button" class="btn-modal" data-dismiss="modal">LISTO!</button>
+				<button id="hbtn" type="button" class="btn-modal-inst" data-dismiss="modal">LISTO!</button>
 			</div>
     </div>
   </div>
