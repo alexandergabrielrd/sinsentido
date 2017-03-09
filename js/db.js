@@ -83,7 +83,7 @@
  		"a": "1"
  	}]
  }, {
- 	"list": [{//faltan 3 oido
+ 	"list": [{//faltan 1 oido
  		"q": "Pregunta oido 1",
  		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
  		"a": "1"
@@ -96,9 +96,9 @@
  		"o": ["Mecanoceptor", "Fotorreceptor", "Nociceptor", "Ninguna de las anteriores"],
  		"a": "4"
  	}, {
- 		"q": "Pregunta oido 4",
- 		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
- 		"a": "1"
+ 		"q": "¿Dónde se puede encontrar la endolinfa?",
+ 		"o": ["Rampa tímpanica", "Rampa vestibular", "Rampa coclear", "Ducto coclear"],
+ 		"a": "4"
  	}, {
  		"q": "¿Cuáles son las partes del laberinto óseo?",
  		"o": ["Oido interno y medio", "Martillo, yunque y estribo", "Vestíbulo, cóclea y conductos semicirculares", "Ninguna de los anteriores"],
@@ -116,8 +116,8 @@
  		"o": ["Cuando es mayor a 20000 Hz", "Cuando es mayor a 40000 Hz", "Cuando es mayor de 15000 Hz", "Ninguna de las anteriores"],
  		"a": "2"
  	}, {
- 		"q": "Pregunta oido 9",
- 		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
+ 		"q": "¿Cuál de estos nervios transmitirá información del equilibrio?",
+ 		"o": ["Nervio vestibular", "Nervio trigémino", "Nervio abducens", "Ninguna de las anteriores"],
  		"a": "1"
  	}, {
  		"q": "¿Cuál de estas afirmaciones es correcta?",
