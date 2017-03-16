@@ -42,9 +42,9 @@
  	},]
  }, {
  	"list": [{ //faltan 2 gusto
- 		"q": "Pregunta gusto 1",
- 		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
- 		"a": "1"//faltaaaaa
+ 		"q": "¿Dónde se encuentra la zona que se enfoca en percibir lo amargo?",
+ 		"o": ["En la punta", "En los bordes", "En el paladar", "Ninguna de las anteriores"],
+ 		"a": "4"//faltaaaaa
  	}, {
  		"q": "¿Cuántos sabores pueden distinguir los quimiorreceptores de la lengua?",
  		"o": ["6", "5", "7", "3"],
@@ -70,8 +70,8 @@
  		"o": ["Papilas gustativas", "Saliva", "Todas las anteriores", "Ninguna de las anteriores"],
  		"a": "4"
  	}, {
- 		"q": "Pregunta gusto 8",
- 		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
+ 		"q": "¿Cuál de estas afirmaciones es correcta?",
+ 		"o": ["En el paladar existen quimiorreceptores", "En la punta se detecta lo amargo", "Todas las anteriores", "Ninguna de las anteriores"],
  		"a": "1"//faltaaaaa
  	}, {
  		"q": "¿Qué nervios intervienen en el gusto?",
@@ -83,11 +83,7 @@
  		"a": "1"
  	}]
  }, {
- 	"list": [{//faltan 1 oido
- 		"q": "Pregunta oido 1",
- 		"o": ["Fiesta", "Focus", "Mustang", "Uno"],
- 		"a": "1"
- 	}, {
+ 	"list": [ {
  		"q": "¿Cuáles son las clases de equilibrio del organismo humano?",
  		"o": ["Espacial y automático", "Dinámico y espacial", "Estático y dinámico", "Ninguna de las anteriores"],
  		"a": "3"
@@ -103,7 +99,11 @@
  		"q": "¿Cuáles son las partes del laberinto óseo?",
  		"o": ["Oido interno y medio", "Martillo, yunque y estribo", "Vestíbulo, cóclea y conductos semicirculares", "Ninguna de los anteriores"],
  		"a": "1"
- 	}, {
+ 	}, {//faltan 1 oido
+ 		"q": "¿Dónde se disipan las vibraciones?",
+ 		"o": ["Rampa vestibular", "Ventana oval", "Ventana redonda", "Rampa tímpanica"],
+ 		"a": "1"
+ 	},{
  		"q": "¿Qué célula reacciona a la gravedad y el movimiento?",
  		"o": ["Celulas timpánica", "Célula ciliar", "Célula oval", "Ninguna de las anteriores"],
  		"a": "2"
@@ -113,8 +113,7 @@
  		"a": "2"
  	}, {
  		"q": "¿Cuándo una frecuencia se vuelve ultrasonido? ",
- 		"o": ["Cuando es mayor a 20000 Hz", "Cuando es mayor a 40000 Hz", "Cuando es mayor de 15000 Hz", "Ninguna de las anteriores"],
- 		"a": "2"
+ 		"o": ["Cuando es mayor a 20000 Hz", "Cuando es mayor a 40000 Hz", "Cuando es mayor de 15000 Hz", "Ninguna de las anteriores"],		"a": "2"
  	}, {
  		"q": "¿Cuál de estos nervios transmitirá información del equilibrio?",
  		"o": ["Nervio vestibular", "Nervio trigémino", "Nervio abducens", "Ninguna de las anteriores"],
